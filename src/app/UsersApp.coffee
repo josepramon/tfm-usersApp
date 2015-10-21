@@ -77,14 +77,14 @@ components = [
 
 
 ###
-MosaiqoCMS application class
+UsersApp application class
 ------------------------------
 
 @class
 @augments Application
 
 ###
-module.exports = class MosaiqoApp extends Application
+module.exports = class UsersApp extends Application
 
   ###
   @property {String} Default channel used by backbone.radio

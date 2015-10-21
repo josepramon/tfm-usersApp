@@ -8,7 +8,7 @@ Application configuration
 module.exports =
 
   # default application radio channel
-  appChannel: 'MosaiqoApp'
+  appChannel: 'UsersApp'
 
   # API params (base url, etc)
   API:

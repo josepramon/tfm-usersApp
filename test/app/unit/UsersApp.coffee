@@ -1,6 +1,6 @@
-describe 'MosaiqoApp', ->
-  MosaiqoApp = require 'MosaiqoApp'
-  sinon      = require 'sinon'
+describe 'UsersApp', ->
+  App   = require 'UsersApp'
+  sinon = require 'sinon'
 
   app    = null
   server = null
@@ -22,7 +22,7 @@ describe 'MosaiqoApp', ->
 
 
   beforeEach (done) ->
-    app = new MosaiqoApp
+    app = new App
     done()
 
 
@@ -39,7 +39,7 @@ describe 'MosaiqoApp', ->
 
     # check the supplied value
     app = null
-    app = new MosaiqoApp
+    app = new App
       environment: 'development'
 
     expect(app.environment).to.be.equal 'development'
