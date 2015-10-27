@@ -15,6 +15,8 @@ http://www.mosaiqo.com
 # Dependencies
 # -------------------------
 
+i18n = require 'i18next-client'
+
 # Application configuration
 config        = require 'config/app'
 localesConfig = require 'config/locales'
@@ -162,9 +164,13 @@ module.exports = class UsersApp extends Application
     if @channel.request 'auth:isAuthenticated'
       @channel.trigger 'auth:authenticated'
 
-    # trigger the initial route
+    # Initialize app nav.
     @loginRoute = @channel.request 'auth:routes:login'
+    @errorRoute = @channel.request 'auth:routes:error'
+
     @setupAuthNavigationHooks()
+
+    # trigger the initial route
     @startNavigation()
 
 
@@ -290,6 +296,19 @@ module.exports = class UsersApp extends Application
 
       # send the user to the login route
       @navigate(@loginRoute, trigger: true)
+
+
+    # if the user is authenticated but not allowed, show an error
+    @listenTo @channel, 'auth:accessDenied', =>
+      errTitle   = i18n.t 'Access denied'
+      errMessage = i18n.t 'You are not allowed to access to this section.'
+
+      # show a flash msg
+      @channel.request 'flash:error', errMessage, errTitle,
+        preventDuplicates: true
+
+      # redirect
+      @navigate(@errorRoute, trigger: true)
 
 
     # if the user was trying to access some route before
