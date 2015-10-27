@@ -14,6 +14,11 @@ module.exports = [
     class: require 'modules/user'
     submodules: []
   ,
+    id:    'KnowledgeBase'
+    class: require 'modules/knowledge_base'
+  ,
+    id:    'Tickets'
+    class: require 'modules/tickets'
   ,
     id: 'UI'
     submodules: [
