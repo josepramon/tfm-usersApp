@@ -6,7 +6,7 @@
   position: relative
   height: 50px
   padding-left: 17px
-  background-color: transparent
+  background-color: $appTheme['bgColorDark']
 
 
   &, a
@@ -51,11 +51,6 @@
       accessibleHiddenInline()
 
 
-
-.authenticated #globalHeader
-  background-color: $appTheme['bgColorDark']
-
-
 // layout collapsing button
 #globalNavToggler
   position: absolute
@@ -64,14 +59,8 @@
 
 
 // show/hide the logo and layout collapsing button on auth events
-// (the login has its own logo, and it makes no sense to display
-// the globalNavToggler if there's no nav)
 #globalHeader h1, #globalNavToggler
-  display: none
-
-&.authenticated
-  #globalHeader h1, #globalNavToggler
-    display: inline-block
+  display: inline-block
 
 
 
