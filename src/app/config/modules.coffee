@@ -14,8 +14,6 @@ module.exports = [
     class: require 'modules/user'
     submodules: []
   ,
-    id:    'Dashboard'
-    class: require 'modules/dashboard'
   ,
     id: 'UI'
     submodules: [
@@ -24,15 +22,9 @@ module.exports = [
       submodules: [
         id:    'HeaderNav'
         class: require 'modules/ui/header/modules/headerNav'
-      ,
-        id:    'LanguageSwitcher'
-        class: require 'modules/ui/header/modules/languageSwitcher'
       ]
     ,
       id:    'Footer'
       class: require 'modules/ui/footer'
-    ,
-      id:    'Nav'
-      class: require 'modules/ui/navigation'
     ]
 ]
