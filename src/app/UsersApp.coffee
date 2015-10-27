@@ -121,8 +121,8 @@ module.exports = class UsersApp extends Application
     @setupAPI options?.apiRootUrl
 
     # Overwrite the rootRoute
-    if @Dashboard
-      @rootRoute = @module('Dashboard').meta.rootUrl
+    if @KnowledgeBase
+      @rootRoute = @module('KnowledgeBase').meta.rootUrl
 
     # Show a warning when a HTTP error happens
     @listenTo @channel, 'http:error', (args) =>
@@ -149,7 +149,6 @@ module.exports = class UsersApp extends Application
   @param {Object} options    initialization options
   ###
   onStart: (options) ->
-
     # At this point all the modules should be loaded. If the session already
     # exists (saved on the localStorage), trigger the isAuthenticated event so
     # the other modules start and th initial route can be navigated.
@@ -163,7 +162,9 @@ module.exports = class UsersApp extends Application
     if @channel.request 'auth:isAuthenticated'
       @channel.trigger 'auth:authenticated'
 
-    # trigger the initial route (when the locales are ready)
+    # trigger the initial route
+    @loginRoute = @channel.request 'auth:routes:login'
+    @setupAuthNavigationHooks()
     @startNavigation()
 
 
@@ -265,13 +266,21 @@ module.exports = class UsersApp extends Application
     ), 5000
 
 
-    # ### Authentication event hooks:
+    # ### Navigate to the initial route (if authorised)
     #
-    # Listen to the login/logout events and redirect to the appropiate routes
+    # Navigate us to the root route unless we're already navigated somewhere else.
+    initialRoute = @getCurrentRoute()
+    @navigate(initialRoute, trigger: true) unless (initialRoute and initialRoute is not @loginRoute)
 
+
+
+  ###
+  Authentication event hooks:
+
+  Listen to the login/logout events and redirect to the appropiate routes
+  ###
+  setupAuthNavigationHooks: ->
     prevRoute  = null
-    loginRoute = @channel.request 'auth:routes:login'
-
 
     # redirect to the login route if the user is not authenticated
     @listenTo @channel, 'auth:unauthenticated', =>
@@ -280,31 +289,16 @@ module.exports = class UsersApp extends Application
       prevRoute = @getCurrentRoute() or @rootRoute
 
       # send the user to the login route
-      @navigate(loginRoute, trigger: true)
+      @navigate(@loginRoute, trigger: true)
 
 
     # if the user was trying to access some route before
     # the unauthenticated event, redirect to that route
     @listenTo @channel, 'auth:authenticated', =>
-      if prevRoute is loginRoute
+      if prevRoute is @loginRoute
         prevRoute = null
       if prevRoute
         @navigate(prevRoute, trigger: true)
         prevRoute = null
       else
         @navigate(@rootRoute, trigger: true)
-
-
-    # ### Navigate to the initial route (if authorised)
-    #
-    # Using `unless... else...` instead of `if... else...` to avoid the user module
-    # dependency. If the user module is removed for whatever reason (i can't think
-    # of a valid reason, but anyway) this will keep working correctly.
-    unless @channel.request 'auth:isAuthenticated'
-      @channel.trigger 'auth:unauthenticated'
-    else
-      # Navigate us to the root route unless we're already navigated somewhere else.
-      # If the route is the login one and the user is already authenticated, navigate
-      # to the default initial route.
-      initialRoute = @getCurrentRoute()
-      @navigate(initialRoute, trigger: true) unless (initialRoute and initialRoute is not loginRoute)
