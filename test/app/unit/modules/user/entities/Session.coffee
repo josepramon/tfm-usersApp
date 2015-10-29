@@ -66,19 +66,13 @@ describe 'modules/user/entities/Session', ->
   it 'should have certain defaults', (done) ->
     model = new SessionModel
 
-    expect(model.get 'id').not.to.be.undefined
     expect(model.get 'token').not.to.be.undefined
     expect(model.get 'token_iat').not.to.be.undefined
     expect(model.get 'token_exp').not.to.be.undefined
-    expect(model.get 'username').not.to.be.undefined
-    expect(model.get 'email').not.to.be.undefined
 
-    expect(model.get 'id').to.be.null
     expect(model.get 'token').to.be.null
     expect(model.get 'token_iat').to.be.null
     expect(model.get 'token_exp').to.be.null
-    expect(model.get 'username').to.equal ''
-    expect(model.get 'email').to.equal ''
     done()
 
 
@@ -86,12 +80,9 @@ describe 'modules/user/entities/Session', ->
     fixture = new SessionFixture
     model   = new SessionModel fixture
 
-    expect(model.get 'id').to.equal fixture.id
     expect(model.get 'token').to.equal fixture.token
     expect(model.get 'token_iat').to.equal fixture.token_iat
     expect(model.get 'token_exp').to.equal fixture.token_exp
-    expect(model.get 'username').to.equal fixture.username
-    expect(model.get 'email').to.equal fixture.email
     done()
 
 
