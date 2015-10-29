@@ -1,0 +1,63 @@
+<h3>{{t "user::profile"}}</h3>
+
+{{#with profile}}
+<div class="form-group">
+  <label for="name" class="control-label">
+    {{t "UserProfileModel::name"}}
+  </label>
+  <div>
+    <input type="text" class="form-control" id="name" name="profile.name" placeholder="{{t "UserProfileModel::name"}}" value="{{name}}">
+    <span class="help-block hidden"></span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="surname" class="control-label">
+    {{t "UserProfileModel::surname"}}
+  </label>
+  <div>
+    <input type="text" class="form-control" id="surname" name="profile.surname" placeholder="{{t "UserProfileModel::surname"}}" value="{{surname}}">
+    <span class="help-block hidden"></span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="phone" class="control-label">
+    {{t "UserProfileModel::phone"}}
+  </label>
+  <div>
+    <input type="text" class="form-control" id="phone" name="profile.phone" placeholder="{{t "UserProfileModel::phone"}}" value="{{phone}}">
+    <span class="help-block hidden"></span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="location" class="control-label">
+    {{t "UserProfileModel::location"}}
+  </label>
+  <div>
+    <input type="text" class="form-control" id="location" name="profile.location" placeholder="{{t "UserProfileModel::location"}}" value="{{location}}">
+    <span class="help-block hidden"></span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="company" class="control-label">
+    {{t "UserProfileModel::company"}}
+  </label>
+  <div>
+    <input type="text" class="form-control" id="company" name="profile.company" placeholder="{{t "UserProfileModel::company"}}" value="{{company}}">
+    <span class="help-block hidden"></span>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="url" class="control-label">
+    {{t "UserProfileModel::url"}}
+  </label>
+  <div>
+    <input type="text" class="form-control" id="url" name="profile.url" placeholder="{{t "UserProfileModel::url"}}" value="{{url}}">
+    <span class="help-block hidden"></span>
+  </div>
+</div>
+{{/with}}
