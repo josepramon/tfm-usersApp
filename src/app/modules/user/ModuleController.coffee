@@ -6,6 +6,7 @@ Controller = require 'msq-appbase/lib/appBaseComponents/controllers/Controller'
 
 # Action controllers
 LoginController     = require './actions/login/LoginController'
+AccountController   = require './actions/account/AccountController'
 ProfileController   = require './actions/profile/ProfileController'
 AuthErrorController = require './actions/error/AuthErrorController'
 
@@ -34,8 +35,21 @@ module.exports = class ModuleController extends Controller
   login: ->
     new LoginController()
 
+  account: ->
+    if @_checkAccess()
+      new AccountController()
+
   profile: ->
-    new ProfileController()
+    if @_checkAccess()
+      new ProfileController()
 
   authError: ->
     new AuthErrorController()
+
+
+
+  ###
+  Limit the access to authenticated users
+  ###
+  _checkAccess: ->
+    @appChannel.request 'auth:requireAuth', null, false
