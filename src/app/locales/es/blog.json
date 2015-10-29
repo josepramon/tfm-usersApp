@@ -18,10 +18,12 @@
   "Category successfully deleted": "La categoría ha sido eliminada",
   "Category successfully updated": "La categoría ha sido actualizada correctamente",
   "CategoryModel": {
+    "parent": "Categoría padre",
     "articles": "Artículos",
     "description": "Descripción",
     "name": "Nombre",
-    "slug": "Slug"
+    "slug": "Slug",
+    "subcategories": "Subcategorías"
   },
   "New category": "Nueva categoría",
   "New post": "Nueva entrada",
@@ -42,6 +44,8 @@
     "Allow comments": "Permitir comentarios",
     "Article": "Artículo",
     "Author": "Autor",
+    "Category": "Categoría",
+    "Category and tags": "Categoría y etiquetas",
     "Enable sharing buttons": "Activar botones de compartir",
     "Excerpt": "Extracto",
     "Not published": "No publicado",

@@ -18,10 +18,12 @@
   "Category successfully deleted": "La categoria ha estat eliminada",
   "Category successfully updated": "La categoria s'ha actualitzat correctament",
   "CategoryModel": {
+    "parent": "Categoria pare",
     "articles": "Articles",
     "description": "Descripció",
     "name": "Nom",
-    "slug": "Slug"
+    "slug": "Slug",
+    "subcategories": "Subcategories"
   },
   "New category": "Nova categoria",
   "New post": "Nova entrada",
@@ -42,6 +44,8 @@
     "Allow comments": "Permetre comentaris",
     "Article": "Article",
     "Author": "Autor",
+    "Category": "Categoria",
+    "Category and tags": "Categoria i etiquetes",
     "Enable sharing buttons": "Activar botons de compartir",
     "Excerpt": "Extracte",
     "Not published": "No publicat",
@@ -50,7 +54,7 @@
     "Scheduled publishing": "Publicació programada",
     "Slug": "Slug",
     "Social": "Social",
-    "Tags": "Etíquetes",
+    "Tags": "Etiquetes",
     "Title": "Títol"
   },
   "sections": {

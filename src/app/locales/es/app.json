@@ -1,25 +1,34 @@
 {
+  "Access denied": "Acceso denegado",
   "Are you sure you want to delete this?": "¿Estás seguro que quieres eliminar esto?",
   "Cancel": "Cancelar",
   "Create": "Crear",
-  "Created at ": "Creado ",
-  "Delete": "Eliminar",
-  "Edit": "Editar",
-  "Edit publish schedule": "Editar fecha de publicación",
+  "Error communicating with the server": "Error en la comunicación con el servidor",
   "Expand/collapse menu": "Expandir/colapsar menú",
-  "Help": "Ayuda",
-  "Loading": "Cargando",
   "Login": "Iniciar sesión",
   "Logout": "Cerrar sesión",
-  "Publish": "Publicar",
-  "Published at ": "Publicado en ",
   "Save": "Guardar",
-  "Search": "Buscar",
-  "Unpublish": "Despublicar",
   "Update": "Actualizar",
-  "Updated at ": "Actualizado en ",
-  "Will be published on ": "Será publicado en ",
-  "by ": "por ",
+  "UserModel": {
+    "email": "Email",
+    "oldPassword": "Contraseña anterior",
+    "password": "Nueva contraseña",
+    "privileges": "Permisos",
+    "profile": "Perfil",
+    "rePassword": "Confirmar nueva contraseña",
+    "role": "Rol",
+    "username": "Nombre de usuario"
+  },
+  "UserProfileModel": {
+    "company": "Empresa",
+    "location": "Ubicación",
+    "name": "Nombre",
+    "phone": "Teléfono",
+    "surname": "Apellidos",
+    "url": "URL"
+  },
+  "Validation error": "Error de validación",
+  "You are not allowed to access to this section.": "No tienes privilegios para acceder a esta sección.",
   "footer": {
     "About": "Sobre nosotros",
     "Contact Us": "Contacto",
@@ -50,6 +59,13 @@
     "Previous": "Anterior"
   },
   "password": "Contraseña",
+  "user": {
+    "Account successfully updated": "La cuenta se actualizado correctamente",
+    "Change password": "Canvio de contraseña",
+    "Profile successfully updated": "El perfil se actualizado correctamente",
+    "User details": "Datos del usuario",
+    "profile": "Perfil"
+  },
   "username": "Nombre de usuario",
   "validation": {
     "{0} is invalid": "{0} no es válido",

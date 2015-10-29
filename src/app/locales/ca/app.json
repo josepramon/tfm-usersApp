@@ -1,25 +1,34 @@
 {
+  "Access denied": "Accés denegat",
   "Are you sure you want to delete this?": "Estàs segur què vols eliminar això?",
   "Cancel": "Cancelar",
   "Create": "Crear",
-  "Created at ": "Creat ",
-  "Delete": "Eliminar",
-  "Edit": "Editar",
-  "Edit publish schedule": "Editar data de publicació",
+  "Error communicating with the server": "Error en la comunicació amb el servidor",
   "Expand/collapse menu": "Expandir/colapsar menú",
-  "Help": "Ajuda",
-  "Loading": "Carregant",
   "Login": "Iniciar sessió",
   "Logout": "Tancar sessió",
-  "Publish": "Publicar",
-  "Published at ": "Publicat el ",
   "Save": "Desar",
-  "Search": "Cercar",
-  "Unpublish": "Despublicar",
   "Update": "Actualitzar",
-  "Updated at ": "Actualitzat el ",
-  "Will be published on ": "Es publicarà el ",
-  "by ": "per ",
+  "UserModel": {
+    "email": "Email",
+    "oldPassword": "Contrassenya anterior",
+    "password": "Nova contrassenya",
+    "privileges": "Permisos",
+    "profile": "Perfil",
+    "rePassword": "Confirmar nova contrassenya",
+    "role": "Rol",
+    "username": "Nom d'usuari"
+  },
+  "UserProfileModel": {
+    "company": "Empresa",
+    "location": "Ubicació",
+    "name": "Nom",
+    "phone": "Telèfon",
+    "surname": "Cognoms",
+    "url": "URL"
+  },
+  "Validation error": "Error de validació",
+  "You are not allowed to access to this section.": "No tens permisos per accedir a aquesta secció.",
   "footer": {
     "About": "Sobre nosaltres",
     "Contact Us": "Contacte",
@@ -50,6 +59,13 @@
     "Previous": "Anterior"
   },
   "password": "Contrassenya",
+  "user": {
+    "Account successfully updated": "El compte s'ha actualitzat correctament",
+    "Change password": "Canvi de contrassenya",
+    "Profile successfully updated": "El perfil s'ha actualitzat correctament",
+    "User details": "Dades d'usuari",
+    "profile": "Perfil"
+  },
   "username": "Nom d'usuari",
   "validation": {
     "{0} is invalid": "{0} no és vàlid",
