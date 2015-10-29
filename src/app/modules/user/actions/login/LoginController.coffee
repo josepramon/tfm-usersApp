@@ -1,6 +1,6 @@
 _              = require 'underscore'
 ViewController = require 'msq-appbase/lib/appBaseComponents/controllers/ViewController'
-LoginView      = require './LoginView'
+LoginView      = require './views/LoginView'
 
 
 # User module login controller
@@ -38,7 +38,9 @@ module.exports = class LoginController extends ViewController
   # @return {UserLogin} the login model
   #
   getLoginModel: ->
-    @appChannel.request 'user:login:entity'
+    model = @appChannel.request 'user:login:entity'
+    @setApplicationId model
+    model
 
 
   # Login view getter
@@ -48,3 +50,15 @@ module.exports = class LoginController extends ViewController
   getLoginView: (model) ->
     new LoginView
       model: model
+
+
+  # App ID setter
+  #
+  # the application may have an ID
+  # this id is used in the API to restrict some actions
+  # or to identify where the request comes from
+  setApplicationId: (model) ->
+    appId = @appChannel.request 'application:id'
+    if appId
+      model.set
+        appID: appId
