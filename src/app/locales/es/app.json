@@ -5,10 +5,13 @@
   "Create": "Crear",
   "Error communicating with the server": "Error en la comunicación con el servidor",
   "Expand/collapse menu": "Expandir/colapsar menú",
+  "Help": "Help",
+  "List": "Listar",
   "Login": "Iniciar sesión",
   "Logout": "Cerrar sesión",
   "Save": "Guardar",
   "Update": "Actualizar",
+  "Upload new picture": "Subir una nueva imagen",
   "UserModel": {
     "email": "Email",
     "oldPassword": "Contraseña anterior",
@@ -20,6 +23,7 @@
     "username": "Nombre de usuario"
   },
   "UserProfileModel": {
+    "avatar": "Imagen de perfil",
     "company": "Empresa",
     "location": "Ubicación",
     "name": "Nombre",
@@ -44,12 +48,14 @@
     "Categories": "Categorías",
     "Comments": "Comentarios",
     "Dashboard": "Inicio",
+    "KnowledgeBase": "Knowledge Base",
     "Media": "Media",
     "Pages": "Páginas",
     "Posts": "Artículos",
     "Settings": "Preferencias",
     "Store": "Tienda",
     "Tags": "Etiquetas",
+    "Tickets": "Tickets",
     "User": "Usuario"
   },
   "pagination": {
@@ -60,11 +66,11 @@
   },
   "password": "Contraseña",
   "user": {
+    "Account": "Cuenta",
     "Account successfully updated": "La cuenta se actualizado correctamente",
     "Change password": "Canvio de contraseña",
-    "Profile successfully updated": "El perfil se actualizado correctamente",
-    "User details": "Datos del usuario",
-    "profile": "Perfil"
+    "Profile": "Perfil",
+    "Profile successfully updated": "El perfil se actualizado correctamente"
   },
   "username": "Nombre de usuario",
   "validation": {

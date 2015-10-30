@@ -5,10 +5,13 @@
   "Create": "Create",
   "Error communicating with the server": "Error communicating with the server",
   "Expand/collapse menu": "Expand/collapse menu",
+  "Help": "Help",
+  "List": "List",
   "Login": "Login",
   "Logout": "Logout",
   "Save": "Save",
   "Update": "Update",
+  "Upload new picture": "Upload new picture",
   "UserModel": {
     "email": "Email",
     "oldPassword": "Old password",
@@ -20,6 +23,7 @@
     "username": "Username"
   },
   "UserProfileModel": {
+    "avatar": "Profile image",
     "company": "Company",
     "location": "Location",
     "name": "Name",
@@ -44,12 +48,14 @@
     "Categories": "Categories",
     "Comments": "Comments",
     "Dashboard": "Dashboard",
+    "KnowledgeBase": "Knowledge Base",
     "Media": "Media",
     "Pages": "Pages",
     "Posts": "Posts",
     "Settings": "Settings",
     "Store": "Store",
     "Tags": "Tags",
+    "Tickets": "Tickets",
     "User": "User"
   },
   "pagination": {
@@ -60,11 +66,11 @@
   },
   "password": "Password",
   "user": {
+    "Account": "Account",
     "Account successfully updated": "Account successfully updated",
     "Change password": "Change password",
-    "Profile successfully updated": "Profile successfully updated",
-    "User details": "User details",
-    "profile": "Profile"
+    "Profile": "Profile",
+    "Profile successfully updated": "Profile successfully updated"
   },
   "username": "User name",
   "validation": {

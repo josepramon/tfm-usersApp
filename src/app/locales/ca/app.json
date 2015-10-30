@@ -5,10 +5,13 @@
   "Create": "Crear",
   "Error communicating with the server": "Error en la comunicació amb el servidor",
   "Expand/collapse menu": "Expandir/colapsar menú",
+  "Help": "Help",
+  "List": "Llistar",
   "Login": "Iniciar sessió",
   "Logout": "Tancar sessió",
   "Save": "Desar",
   "Update": "Actualitzar",
+  "Upload new picture": "Pujar una nova imatge",
   "UserModel": {
     "email": "Email",
     "oldPassword": "Contrassenya anterior",
@@ -20,6 +23,7 @@
     "username": "Nom d'usuari"
   },
   "UserProfileModel": {
+    "avatar": "Imatge de perfil",
     "company": "Empresa",
     "location": "Ubicació",
     "name": "Nom",
@@ -44,12 +48,14 @@
     "Categories": "Categories",
     "Comments": "Comentaris",
     "Dashboard": "Inici",
+    "KnowledgeBase": "Knowledge Base",
     "Media": "Media",
     "Pages": "Pàgines",
     "Posts": "Artícles",
     "Settings": "Preferències",
     "Store": "Botiga",
     "Tags": "Etiquetes",
+    "Tickets": "Tickets",
     "User": "Usuari"
   },
   "pagination": {
@@ -60,11 +66,11 @@
   },
   "password": "Contrassenya",
   "user": {
+    "Account": "Compte",
     "Account successfully updated": "El compte s'ha actualitzat correctament",
     "Change password": "Canvi de contrassenya",
-    "Profile successfully updated": "El perfil s'ha actualitzat correctament",
-    "User details": "Dades d'usuari",
-    "profile": "Perfil"
+    "Profile": "Perfil",
+    "Profile successfully updated": "El perfil s'ha actualitzat correctament"
   },
   "username": "Nom d'usuari",
   "validation": {
