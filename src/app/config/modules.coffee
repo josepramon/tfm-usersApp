@@ -12,7 +12,10 @@ something like that
 module.exports = [
     id:    'User'
     class: require 'modules/user'
-    submodules: []
+    submodules: [
+      id:    'Register'
+      class: require 'modules/user/modules/register'
+    ]
   ,
     id:    'KnowledgeBase'
     class: require 'modules/knowledge_base'
@@ -27,6 +30,9 @@ module.exports = [
       submodules: [
         id:    'HeaderNav'
         class: require 'modules/ui/header/modules/headerNav'
+      ,
+        id:    'User'
+        class: require 'modules/ui/header/modules/user'
       ]
     ,
       id:    'Footer'

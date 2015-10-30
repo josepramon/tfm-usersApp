@@ -5,11 +5,13 @@
   "Create": "Crear",
   "Error communicating with the server": "Error en la comunicación con el servidor",
   "Expand/collapse menu": "Expandir/colapsar menú",
-  "Help": "Help",
   "List": "Listar",
   "Login": "Iniciar sesión",
-  "Logout": "Cerrar sesión",
+  "Password reset request expired.": "Link de recuperación de contraseña expirado",
+  "Recover password": "Recuperar contraseña",
+  "Register": "Registro",
   "Save": "Guardar",
+  "Set new password": "Establecer nueva contraseña",
   "Update": "Actualizar",
   "Upload new picture": "Subir una nueva imagen",
   "UserModel": {
@@ -41,6 +43,12 @@
     "Support": "Soporte",
     "Terms of Service": "Términos y Condiciones"
   },
+  "forgot password?": "¿has olvidado la contraseña?",
+  "header": {
+    "Login": "Iniciar sessión",
+    "Logout": "Cerrar sessión",
+    "Register": "Registro"
+  },
   "modules": {
     "Analytics": "Analítica",
     "Auth": "Autenticación",
@@ -52,6 +60,7 @@
     "Media": "Media",
     "Pages": "Páginas",
     "Posts": "Artículos",
+    "Register": "Registro",
     "Settings": "Preferencias",
     "Store": "Tienda",
     "Tags": "Etiquetas",
@@ -69,8 +78,12 @@
     "Account": "Cuenta",
     "Account successfully updated": "La cuenta se actualizado correctamente",
     "Change password": "Canvio de contraseña",
+    "Password has been unpdated successfully": "La contraseña se actualizado correctamente",
+    "Password reset request successfully created": "Solicitud de reseteo de la contraseña",
     "Profile": "Perfil",
-    "Profile successfully updated": "El perfil se actualizado correctamente"
+    "Profile successfully updated": "El perfil se actualizado correctamente",
+    "Registration successfully completed": "El registro se ha completado correctamente",
+    "You will receive a mail with instructions to reset the password": "Recibirás un correo con instrucciones para resetear la contraseña"
   },
   "username": "Nombre de usuario",
   "validation": {

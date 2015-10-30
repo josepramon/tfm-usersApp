@@ -5,11 +5,13 @@
   "Create": "Create",
   "Error communicating with the server": "Error communicating with the server",
   "Expand/collapse menu": "Expand/collapse menu",
-  "Help": "Help",
   "List": "List",
   "Login": "Login",
-  "Logout": "Logout",
+  "Password reset request expired.": "Password reset request expired.",
+  "Recover password": "Recover password",
+  "Register": "Register",
   "Save": "Save",
+  "Set new password": "Set new password",
   "Update": "Update",
   "Upload new picture": "Upload new picture",
   "UserModel": {
@@ -41,6 +43,12 @@
     "Support": "Support",
     "Terms of Service": "Terms of Service"
   },
+  "forgot password?": "forgot password?",
+  "header": {
+    "Login": "Login",
+    "Logout": "Logout",
+    "Register": "Register"
+  },
   "modules": {
     "Analytics": "Analytics",
     "Auth": "Auth",
@@ -52,6 +60,7 @@
     "Media": "Media",
     "Pages": "Pages",
     "Posts": "Posts",
+    "Register": "Register",
     "Settings": "Settings",
     "Store": "Store",
     "Tags": "Tags",
@@ -69,8 +78,12 @@
     "Account": "Account",
     "Account successfully updated": "Account successfully updated",
     "Change password": "Change password",
+    "Password has been unpdated successfully": "Password has been unpdated successfully",
+    "Password reset request successfully created": "Password reset request",
     "Profile": "Profile",
-    "Profile successfully updated": "Profile successfully updated"
+    "Profile successfully updated": "Profile successfully updated",
+    "Registration successfully completed": "Registration successfully completed",
+    "You will receive a mail with instructions to reset the password": "You will receive a mail with instructions to reset the password"
   },
   "username": "User name",
   "validation": {

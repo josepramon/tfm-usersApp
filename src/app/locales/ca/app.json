@@ -5,11 +5,13 @@
   "Create": "Crear",
   "Error communicating with the server": "Error en la comunicació amb el servidor",
   "Expand/collapse menu": "Expandir/colapsar menú",
-  "Help": "Help",
   "List": "Llistar",
   "Login": "Iniciar sessió",
-  "Logout": "Tancar sessió",
+  "Password reset request expired.": "Enllaç de recuperació de contrassenya expirat",
+  "Recover password": "Recuperació de contrassenya",
+  "Register": "Registre",
   "Save": "Desar",
+  "Set new password": "Establir nova contrassenya",
   "Update": "Actualitzar",
   "Upload new picture": "Pujar una nova imatge",
   "UserModel": {
@@ -41,6 +43,12 @@
     "Support": "Suport",
     "Terms of Service": "Termes i condicions"
   },
+  "forgot password?": "has oblidat la contrassenya?",
+  "header": {
+    "Login": "Iniciar sessió",
+    "Logout": "Tancar sessió",
+    "Register": "Registre"
+  },
   "modules": {
     "Analytics": "Analítica",
     "Auth": "Autenticació",
@@ -52,6 +60,7 @@
     "Media": "Media",
     "Pages": "Pàgines",
     "Posts": "Artícles",
+    "Register": "Registre",
     "Settings": "Preferències",
     "Store": "Botiga",
     "Tags": "Etiquetes",
@@ -69,8 +78,12 @@
     "Account": "Compte",
     "Account successfully updated": "El compte s'ha actualitzat correctament",
     "Change password": "Canvi de contrassenya",
+    "Password has been unpdated successfully": "La contrassenya s'ha actualitzat correctament",
+    "Password reset request successfully created": "Sol·licitud de restauració de contrassenya",
     "Profile": "Perfil",
-    "Profile successfully updated": "El perfil s'ha actualitzat correctament"
+    "Profile successfully updated": "El perfil s'ha actualitzat correctament",
+    "Registration successfully completed": "El registre s'ha completat correctament",
+    "You will receive a mail with instructions to reset the password": "Rebràs un email amb instruccions per restaurar la contrassenya"
   },
   "username": "Nom d'usuari",
   "validation": {

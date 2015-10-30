@@ -1,6 +1,24 @@
-<h3>{{t "user::profile"}}</h3>
-
 {{#with profile}}
+
+
+<div class="form-group">
+  <label for="avatar" class="control-label">
+    {{t "UserProfileModel::avatar"}}
+  </label>
+  <div class="form-image-field">
+    {{#if avatar}}
+      <img src="{{avatar}}" alt="" />
+    {{/if}}
+    <button type="button" id="avatarBtn" class="btn btn-sm" disabled>
+      {{t "Upload new picture"}}
+    </button>
+    <input type="hidden" class="form-control" id="avatar" name="profile.avatar" value="{{avatar}}">
+    <span class="help-block hidden"></span>
+  </div>
+</div>
+
+
+
 <div class="form-group">
   <label for="name" class="control-label">
     {{t "UserProfileModel::name"}}

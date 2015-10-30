@@ -61,7 +61,7 @@ module.exports = class ListController extends ViewController
   @return {Collection}
   ###
   getLinksCollection: ->
-    new Collection @getLinks() # tmp
+    new Collection @getLinks()
 
 
   ###

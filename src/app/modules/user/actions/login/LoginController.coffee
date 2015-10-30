@@ -17,7 +17,7 @@ module.exports = class LoginController extends ViewController
     # when successfully logged in, create/update the session with the returned values
     @listenTo loginModel, 'created', =>
       session = @getSessionModel()
-      session.save _.omit loginModel.attributes, 'password'
+      session.save _.omit loginModel.attributes, 'username', 'password'
       loginModel = null
       @appChannel.trigger 'auth:authenticated'
 

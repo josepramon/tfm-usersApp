@@ -26,7 +26,7 @@ User model
 @augments Model
 
 ###
-module.exports = class Session extends Model
+module.exports = class User extends Model
 
   ###
   @property {String} API url
@@ -83,8 +83,16 @@ module.exports = class Session extends Model
     email:
       required: true
       pattern: 'email'
+    password:
+      required: (value, attr, computedState) ->
+        !!computedState.rePassword || !!computedState.oldPassword
+    oldPassword:
+      required: (value, attr, computedState) ->
+        !!computedState.password
     rePassword:
       equalTo: 'password'
+      required: (value, attr, computedState) ->
+        !!computedState.password
 
 
   ###

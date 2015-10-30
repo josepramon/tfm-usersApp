@@ -5,10 +5,12 @@
 Controller = require 'msq-appbase/lib/appBaseComponents/controllers/Controller'
 
 # Action controllers
-LoginController     = require './actions/login/LoginController'
-AccountController   = require './actions/account/AccountController'
-ProfileController   = require './actions/profile/ProfileController'
-AuthErrorController = require './actions/error/AuthErrorController'
+LoginController                       = require './actions/login/LoginController'
+AccountController                     = require './actions/account/AccountController'
+ProfileController                     = require './actions/profile/ProfileController'
+AuthErrorController                   = require './actions/error/AuthErrorController'
+PasswordRecoveryController            = require './actions/password-recovery/PasswordRecoveryController'
+PasswordRecoverySetPasswordController = require './actions/password-recovery-set-password/SetPasswordController'
 
 
 
@@ -35,6 +37,9 @@ module.exports = class ModuleController extends Controller
   login: ->
     new LoginController()
 
+  logout: ->
+    @appChannel.request 'auth:logout'
+
   account: ->
     if @_checkAccess()
       new AccountController()
@@ -45,6 +50,16 @@ module.exports = class ModuleController extends Controller
 
   authError: ->
     new AuthErrorController()
+
+  recoverPassword: ->
+    new PasswordRecoveryController()
+
+  ###
+  @param {String} id Password recovery request id
+  ###
+  recoverPassword_setPassword: (id) ->
+    new PasswordRecoverySetPasswordController
+      id: id
 
 
 
