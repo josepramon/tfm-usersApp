@@ -1,8 +1,11 @@
 # Dependencies
 # -----------------------
 
+# Libs/generic stuff:
+i18n = require 'i18next-client'
+
 # Base class (extends Marionette.Module)
-Module          = require 'msq-appbase/lib/appBaseComponents/modules/Module'
+Module = require 'msq-appbase/lib/appBaseComponents/modules/Module'
 
 # Module components:
 Router          = require './ModuleRouter'
@@ -34,7 +37,7 @@ module.exports = class TicketsApp extends Module
     ###
     @property {String} human readable module name
     ###
-    title: 'modules::Tickets'
+    title: -> i18n.t 'modules::Tickets'
 
     ###
     @property {String} root url for all module routes
