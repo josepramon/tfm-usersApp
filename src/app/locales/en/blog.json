@@ -18,10 +18,12 @@
   "Category successfully deleted": "Category successfully deleted",
   "Category successfully updated": "Category successfully updated",
   "CategoryModel": {
+    "parent": "Parent category",
     "articles": "Posts",
     "description": "Description",
     "name": "Name",
-    "slug": "Slug"
+    "slug": "Slug",
+    "subcategories": "Subcategories"
   },
   "New category": "New category",
   "New post": "New post",
@@ -42,6 +44,8 @@
     "Allow comments": "Allow comments",
     "Article": "Article",
     "Author": "Author",
+    "Category": "Category",
+    "Category and tags": "Category and tags",
     "Enable sharing buttons": "Enable sharing buttons",
     "Excerpt": "Excerpt",
     "Not published": "Not published",

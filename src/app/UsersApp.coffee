@@ -89,6 +89,11 @@ UsersApp application class
 module.exports = class UsersApp extends Application
 
   ###
+  @property {String} Application ID (used on some requests to the API)
+  ###
+  applicationID: 'usersAPP'
+
+  ###
   @property {String} Default channel used by backbone.radio
   ###
   channelName: config.appChannel
@@ -131,11 +136,11 @@ module.exports = class UsersApp extends Application
       @channel.request 'flash:error', args.errorThrown, args.textStatus,
         preventDuplicates: true
 
+    # App id getter
+    @channel.reply 'application:id', => @applicationID
 
     ###
-
     TMP: default language. This goes in the settings module
-
     ###
     @channel.reply 'languages:default', -> 'en'
     @channel.reply 'languages:all', ->
