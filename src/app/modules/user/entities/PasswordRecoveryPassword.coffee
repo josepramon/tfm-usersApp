@@ -63,7 +63,7 @@ module.exports = class PasswordRecoveryPassword extends Model
   Save error handler
 
   The API throws a 404 error if the password recovery request does not
-  exist anymore (they can only be used once and automatically expire
+  exist anymore (it can only be used once and automatically expire
   after certain amount of time). This is fine, but the generic error
   displayed is a bit weird in this situation. So override it and display
   something more appropiate.

@@ -82,5 +82,5 @@ module.exports = class PasswordRecoveryController extends ViewController
       flashMessage = i18n.t 'user::You will receive a mail with instructions to reset the password'
       @appChannel.request 'flash:success', flashMessage, flashTitle
 
-      # redirect a login
+      # redirect to login
       usersChannel.trigger 'redirect:login'

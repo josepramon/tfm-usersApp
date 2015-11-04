@@ -25,3 +25,4 @@ module.exports = class ModuleRouter extends Router
     '/authError':            'authError'
     '/recover-password':     'recoverPassword'
     '/recover-password/:id': 'recoverPassword_setPassword'
+    '/activate/:id':         'account_activate'

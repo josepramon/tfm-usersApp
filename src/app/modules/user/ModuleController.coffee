@@ -11,7 +11,7 @@ ProfileController                     = require './actions/profile/ProfileContro
 AuthErrorController                   = require './actions/error/AuthErrorController'
 PasswordRecoveryController            = require './actions/password-recovery/PasswordRecoveryController'
 PasswordRecoverySetPasswordController = require './actions/password-recovery-set-password/SetPasswordController'
-
+AccountActivationController           = require './actions/account-activation/ActivationController'
 
 
 
@@ -60,6 +60,14 @@ module.exports = class ModuleController extends Controller
   recoverPassword_setPassword: (id) ->
     new PasswordRecoverySetPasswordController
       id: id
+
+  ###
+  @param {String} id Activation request id
+  ###
+  account_activate: (id) ->
+    new AccountActivationController
+      id: id
+
 
 
 

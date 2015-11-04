@@ -81,5 +81,5 @@ module.exports = class AccountController extends ViewController
       flashMessage = i18n.t 'user::Registration successfully completed'
       @appChannel.request 'flash:success', flashMessage
 
-      # redirect a login
+      # redirect to login
       usersChannel.trigger 'redirect:login'

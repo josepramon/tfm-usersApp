@@ -9,18 +9,18 @@ i18n = require 'i18next-client'
 ViewController = require 'msq-appbase/lib/appBaseComponents/controllers/ViewController'
 
 # The view
-PasswordSetView = require './views/SetPasswordView'
+AccountActivationView = require './views/AccountActivationView'
 
 # Radio channels:
 usersChannel = require '../../moduleChannel'
 
 
-# New password set controller
+# Account activation controller
 #
 module.exports = class SetPasswordController extends ViewController
 
   initialize: (options) ->
-    { model, id } = options
+    { model, id, collection, tagsCollection, categoriesCollection } = options
 
     # if no model provided, retrieve it
     model or= @getModel id
@@ -28,11 +28,13 @@ module.exports = class SetPasswordController extends ViewController
     # create the view
     view = @getView model
 
-    # wrap it into a form component
-    formView = @wrapViewWithForm view, model
-
     # render
-    @show formView
+    @show view
+
+    model.save null,
+      patch: true
+      success: => @formActionDone true
+      error:   => @formActionDone()
 
 
   ###
@@ -45,7 +47,7 @@ module.exports = class SetPasswordController extends ViewController
   @return {View}
   ###
   getView: (data) ->
-    new PasswordSetView
+    new AccountActivationView
       model: data
 
 
@@ -54,24 +56,7 @@ module.exports = class SetPasswordController extends ViewController
   Load the model
   ###
   getModel: (id) ->
-    @appChannel.request 'user:passwordRecoveryPassword:entity', id
-
-
-  ###
-  Form setup
-
-  Wraps the view inside a FormComponent that handles the
-  serializing/deserializing, validation and other stuff.
-
-  @param {View}       view
-  @param {Model}      model
-  ###
-  wrapViewWithForm: (view, model) ->
-    @appChannel.request 'form:component', view,
-      formCssClass:  'login'
-      onFormCancel:  => @formActionDone()
-      onFormSuccess: => @formActionDone(true)
-
+    @appChannel.request 'user:accountActivation:entity', id
 
 
   ###
@@ -79,8 +64,8 @@ module.exports = class SetPasswordController extends ViewController
   ###
   formActionDone: (success = false) ->
     if success
-      flashMessage = i18n.t 'user::Password has been unpdated successfully'
+      flashMessage = i18n.t 'user::Account has been activated successfully'
       @appChannel.request 'flash:success', flashMessage
 
-      # redirect to login
-      usersChannel.trigger 'redirect:login'
+    # redirect to login
+    usersChannel.trigger 'redirect:login'

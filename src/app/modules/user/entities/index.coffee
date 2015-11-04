@@ -10,6 +10,7 @@ UserLoginModel                    = require './UserLogin'
 RegisterModel                     = require './Register'
 PasswordRecoveryModel             = require './PasswordRecovery'
 PasswordRecovery_NewPasswordModel = require './PasswordRecoveryPassword'
+AccountActivationModel            = require './AccountActivation'
 
 
 
@@ -93,32 +94,35 @@ module.exports = (Module, App, Backbone, Marionette, $, _) ->
       session
 
     ###
-    LoginModel getter
     @return {UserLoginModel}
     ###
     newLoginModel: ->
       new UserLoginModel
 
     ###
-    RegisterModel getter
-    @return {UserLoginModel}
+    @return {RegisterModel}
     ###
     newRegisterModel: ->
       new RegisterModel
 
     ###
-    PasswordRecoveryModel getter
-    @return {UserLoginModel}
+    @return {PasswordRecoveryModel}
     ###
     newPasswordRecoveryModel: ->
       new PasswordRecoveryModel
 
     ###
-    PasswordRecovery_NewPasswordModel getter
-    @return {UserLoginModel}
+    @return {PasswordRecovery_NewPasswordModel}
     ###
     newPasswordSetModel: (id) ->
       new PasswordRecovery_NewPasswordModel
+        id: id
+
+    ###
+    @return {newAccountActivationModel}
+    ###
+    newAccountActivationModel: (id) ->
+      new AccountActivationModel
         id: id
 
 
@@ -135,4 +139,7 @@ module.exports = (Module, App, Backbone, Marionette, $, _) ->
     API.newPasswordRecoveryModel()
 
   App.channel.reply 'user:passwordRecoveryPassword:entity', (id) ->
-    API.newPasswordSetModel(id)
+    API.newPasswordSetModel id
+
+  App.channel.reply 'user:accountActivation:entity', (id) ->
+    API.newAccountActivationModel id
