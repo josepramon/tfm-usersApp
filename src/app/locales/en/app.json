@@ -76,7 +76,10 @@
   "password": "Password",
   "user": {
     "Account": "Account",
+    "Account activation link expired.": "Enllaç d'activació expirat.",
+    "Account has been activated successfully": "El compte s'ha activat correctament",
     "Account successfully updated": "Account successfully updated",
+    "Activating account": "Activar compteg",
     "Change password": "Change password",
     "Password has been unpdated successfully": "Password has been unpdated successfully",
     "Password reset request successfully created": "Password reset request",

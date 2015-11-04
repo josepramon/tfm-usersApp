@@ -76,7 +76,10 @@
   "password": "Contrassenya",
   "user": {
     "Account": "Compte",
+    "Account activation link expired.": "",
+    "Account has been activated successfully": "",
     "Account successfully updated": "El compte s'ha actualitzat correctament",
+    "Activating account": "",
     "Change password": "Canvi de contrassenya",
     "Password has been unpdated successfully": "La contrassenya s'ha actualitzat correctament",
     "Password reset request successfully created": "Sol·licitud de restauració de contrassenya",

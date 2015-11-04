@@ -76,7 +76,10 @@
   "password": "Contraseña",
   "user": {
     "Account": "Cuenta",
+    "Account activation link expired.": "Enlace de activación expirado.",
+    "Account has been activated successfully": "La cuenta ha sido activada correctamente",
     "Account successfully updated": "La cuenta se actualizado correctamente",
+    "Activating account": "Activando cuenta",
     "Change password": "Canvio de contraseña",
     "Password has been unpdated successfully": "La contraseña se actualizado correctamente",
     "Password reset request successfully created": "Solicitud de reseteo de la contraseña",
