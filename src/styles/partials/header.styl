@@ -4,9 +4,10 @@
 
 #globalHeader
   position: relative
-  height: 50px
+  height: 160px
   padding-left: 17px
-  background-color: $appTheme['bgColorDark']
+  background: #adadad url(../images/backgrounds/header/header.jpg) no-repeat
+  background-size: cover
 
 
   &, a
@@ -37,7 +38,6 @@
   // links
   .icon // icon
     font-size: 22px
-    // color: $appTheme['mutedDark']
     color: #777
     transition: color 300ms
 
@@ -77,3 +77,23 @@
 
   #globalNavToggler
     left: 10px
+
+
+
+
+#helpDeskHead
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(0,0,0,.3)
+
+  .inner
+    max-width: 1000px;
+    padding: 20px
+    margin: 0 auto
+
+  h1
+    display: block
+    margin: 0 0 .2em
+    font-size: 1.5em

@@ -33,6 +33,9 @@ module.exports = [
       ,
         id:    'User'
         class: require 'modules/ui/header/modules/user'
+      ,
+        id:    'Search'
+        class: require 'modules/ui/header/modules/search'
       ]
     ,
       id:    'Footer'

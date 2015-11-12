@@ -12,10 +12,17 @@ Knowledge base router
 module.exports = class ModuleRouter extends Router
 
   ###
+  Override the _getRouteRegex method because of the '' route
+  ###
+  _getRouteRegex: (moduleUrl) -> new RegExp "^($|#{moduleUrl})"
+
+
+  ###
   @property {Object} Module routes
   ###
   appRoutes:
-    '' : 'show'
+    '' : 'dashboard'
+
 
   ###
   @property {Object} Module routes
@@ -24,7 +31,15 @@ module.exports = class ModuleRouter extends Router
                      module rootUrl (supplied in the constructor)
   ###
   prefixedAppRoutes:
-    '' : 'redirectToRoot'
-    # articles list by category
-    # search results
-    # detail
+    '/articles'                 : 'list'
+    '/articles/:id(/:slug)'     : 'showArticle'
+    '/categories/:id(/:slug)'   : 'listByCategory'
+    '/categories/uncategorized' : 'listUncategorized'
+    '/tags/:id(/:slug)'         : 'listByTag'
+    '/search/:query'            : 'search'
+
+    # not used routes, redirect to the main section
+    ''                : 'redirectToRoot'
+    '/categories'     : 'redirectToRoot'
+    '/tags'           : 'redirectToRoot'
+    '/search'         : 'redirectToRoot'

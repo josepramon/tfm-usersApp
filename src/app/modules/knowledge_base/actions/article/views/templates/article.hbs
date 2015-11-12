@@ -1,0 +1,90 @@
+<header id="moduleHeader">
+  <ol class="breadcrumb arrow">
+    <li>
+      <a href="#">
+        <i class="icon icon-home"></i>
+        {{t "kb::Knowledge Base"}}
+      </a>
+    </li>
+
+    {{#if category}}
+      {{#with category}}
+        <li>
+          <a href="#knowledge-base/categories/{{id}}/{{slug}}">
+            <i class="icon icon-folder-open"></i>
+            {{name}}
+          </a>
+        </li>
+      {{/with}}
+    {{else}}
+      <li>
+        <a href="#knowledge-base/articles">
+          <i class="icon icon-files-o"></i>
+          {{t "kb::Articles"}}
+        </a>
+      </li>
+    {{/if}}
+
+    <li class="active">
+      <span>
+        <i class="icon icon-file-o"></i>
+        {{title}}
+      </span>
+    </li>
+  </ol>
+</header>
+
+
+
+<article class="article row">
+
+  <div class="main col-xs-12 col-md-9">
+    <header>
+      <h1>{{title}}</h1>
+
+      {{#if publish_date}}
+        <time class="date date-published" title="{{t "Published at "}} {{formatDate publish_date "%d/%m/%Y %I:%M%p"}}">
+          {{formatDate publish_date "%d/%m/%Y"}}
+        </time>
+      {{/if}}
+    </header>
+
+    <div class="article-body">
+      {{{body}}}
+    </div>
+
+  </div>
+
+
+  <aside class="col-xs-12 col-md-3">
+
+    {{#if tags}}
+      <div class="block">
+        <h4>Etiquetes</h4>
+        {{#each tags}}
+          <a href="#knowledge-base/tags/{{id}}/{{slug}}" class="label label-info">{{name}}</a>
+        {{/each}}
+      </div>
+    {{/if}}
+
+    <div class="block related-articles">
+      <h4>Articles relacionats</h4>
+      <ul>
+        <li><a href="#">Sit animi libero ducimus totam tenetur.</a></li>
+        <li><a href="#">Sit animi libero ducimus totam tenetur.</a></li>
+        <li><a href="#">Sit animi libero ducimus totam tenetur.</a></li>
+        <li><a href="#">Sit animi libero ducimus totam tenetur.</a></li>
+        <li><a href="#">Sit animi libero ducimus totam tenetur.</a></li>
+      </ul>
+    </div>
+
+  </aside>
+
+</article>
+
+
+
+
+
+
+<!-- category -->

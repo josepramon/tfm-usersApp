@@ -4,29 +4,6 @@
  * Central container, contains the work area for a given module and optionally
  * a items menu for that module
  *
- * Structure:
- * ----------
- *
- * main
- *   |
- *   |_ div.inner (created by backbone)
- *     |
- *     |_ header#moduleHeader
- *     |
- *     |_ div#moduleContent
- *       |
- *       |_ nav#moduleItems (optional)
- *       |  |
- *       |  |_ div.outer (needed by backbone because the block already contains stuff)
- *       |    |
- *       |    |_ div.inner | div.sectionContainer (created by backbone)
- *       |      |
- *       |      |_ ...
- *       |
- *       |_ div#contentEditArea
- *         |
- *         |_ ...
- *
  */
 
 
@@ -38,7 +15,9 @@ main
   flex-flow: column nowrap
 
   position: relative
-  padding: 20px
+  max-width: 1000px;
+  padding: 30px 20px
+  margin: 0 auto
   overflow: auto
 
   .inner
@@ -68,20 +47,10 @@ main
   padding: 20px
 
 
-// Module items menu
-#moduleItems
-  display: flex
-  flex-flow: column nowrap
-  flex-direction: column
 
-// Work area
-#contentEditArea
-  flex: 1 1 auto
 
 // containers created by backbone
-main > .inner,
-#moduleItems .outer,
-#moduleItems .inner
+main > .inner
   display: flex
   flex: 1
   flex-direction: column
@@ -94,26 +63,14 @@ main > .inner,
 // Header
 // (section title, breadcrumbs, etc)
 #moduleHeader
-  border-bottom: dashed 1px $appTheme['mutedDark']
 
-  h1
-    margin: 0 0 1em
-    font-size:   20px
-    line-height: 20px
-    display: block
-
-
-// Work area
-#contentEditArea:empty
-  position: relative
-
-  &::before
+  // only for screen readers
+  h1, h2, h3
     position: absolute
-    top:  50%
-    left: 50%
-    content: ' '
-    width:  300px
-    height: 100px
-    margin: -50px 0 0 -150px
-    background: url(../images/logos/logo-bg300x100.png) no-repeat
-    opacity: .8
+    width: 1px
+    height: 1px
+    margin: -1px
+    padding: 0
+    overflow: hidden
+    clip: rect(0,0,0,0)
+    border: 0

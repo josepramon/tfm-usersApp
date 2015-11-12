@@ -1,0 +1,13 @@
+<h3 class="panel-title">
+  <a href="#knowledge-base/categories/{{#if id}}{{id}}/{{/if}}{{slug}}">{{name}}</a>
+</h3>
+
+<div class="category-articles">
+  <ul></ul>
+
+  <div class="actions">
+    <a href="#knowledge-base/categories/{{#if id}}{{id}}/{{/if}}{{slug}}" class="btn btn-primary btn-sm btn-link readMore">
+      {{t "See all articles"}} ({{articles_total}})
+    </a>
+  </div>
+</div>

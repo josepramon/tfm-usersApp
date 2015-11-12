@@ -18,6 +18,7 @@ module.exports = class HeaderView extends LayoutView
     languageSwitcher: '#languageSwitcherContainer'
     headerNav:        '#headerNavContainer'
     userWidget:       '#userWidgetContainer'
+    search:           '#searchContainer'
 
   triggers:
     'click #globalNavToggler' : 'layout:collapse'

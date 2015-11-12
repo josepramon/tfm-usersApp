@@ -17,6 +17,7 @@ RouteController = require './ModuleController'
 # there's an addittional independent channel specific to
 # the module
 moduleChannel = require './moduleChannel'
+Entities      = require './entities'
 
 
 
@@ -46,9 +47,21 @@ module.exports = class KnowledgeBaseApp extends Module
 
 
   ###
+  Controller used by the module router
+
+  @type {ModuleController}
+  @private
+  ###
+  moduleController = null
+
+
+  ###
   Module initialization
   ###
   initialize: ->
+
+    # register the module entities
+    @app.module 'Entities.kb', Entities
 
     # setup the module components
     @initModuleRouter()
@@ -56,21 +69,25 @@ module.exports = class KnowledgeBaseApp extends Module
     # module metadata getter
     moduleChannel.reply 'meta', => @meta
 
+    # forward search requests to the controller
+    @listenTo @appChannel, 'kb:search', (data) =>
+      if data.query
+        @search data.query
+        @app.navigate "/#{@meta.rootUrl}/search/#{data.query}"
 
 
-  # Module events
+
+
+  # Module API
   # ------------------------
 
-  ###
-  Event handler executed after the module has been started
-  ###
-  onStart: ->
-
 
   ###
-  Event handler executed after the module has been stopped
+  Search
+
+  @param {String} query
   ###
-  onStop: ->
+  search: (query) -> moduleController.search query
 
 
 
@@ -81,6 +98,8 @@ module.exports = class KnowledgeBaseApp extends Module
   Setup the module router
   ###
   initModuleRouter: ->
+    moduleController = new RouteController()
+
     moduleRouter = new Router
-      controller: new RouteController()
+      controller: moduleController
       rootUrl:    @meta.rootUrl
