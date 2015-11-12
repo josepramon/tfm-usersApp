@@ -2,7 +2,7 @@ Router = require 'msq-appbase/lib/appBaseComponents/Router'
 
 
 ###
-Blog dashboard router
+Knowledge base router
 ======================
 
 @class

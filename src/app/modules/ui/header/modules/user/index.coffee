@@ -25,7 +25,7 @@ Userwidget module
 @augments ModuleController
 
 ###
-module.exports = class Userwidget extends Module
+module.exports = class UserWidget extends Module
 
   ###
   Module initialization

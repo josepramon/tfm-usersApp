@@ -3,7 +3,6 @@ LayoutView = require 'msq-appbase/lib/appBaseComponents/views/LayoutView'
 
 # Users module layout
 #
-# @module blog
 #
 module.exports = class Layout extends LayoutView
 

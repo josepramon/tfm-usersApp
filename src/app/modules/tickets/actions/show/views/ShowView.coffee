@@ -2,8 +2,8 @@ ItemView = require 'msq-appbase/lib/appBaseComponents/views/ItemView'
 
 
 ###
-Blog dashboard view
-=======================
+Knowledge Base dashboard view
+==============================
 
 @class
 @augments ItemView

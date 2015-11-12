@@ -8,11 +8,6 @@ ViewController = require 'msq-appbase/lib/appBaseComponents/controllers/ViewCont
 ShowView       = require './views/ShowView'
 
 # Radio channels:
-# All the modules have inherited an @appChannel propperty,
-# which is a global communication channel. In this case,
-# there're two addittional independent channels, the
-# channel for the Dashboard module, and the parent
-# module (blog) channel.
 moduleChannel = require '../../moduleChannel'
 
 
