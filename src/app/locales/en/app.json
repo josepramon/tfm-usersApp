@@ -4,13 +4,15 @@
   "Cancel": "Cancel",
   "Create": "Create",
   "Error communicating with the server": "Error communicating with the server",
-  "Expand/collapse menu": "Expand/collapse menu",
   "List": "List",
+  "Loading": "Loading",
   "Login": "Login",
   "Password reset request expired.": "Password reset request expired.",
+  "Published at ": "Published at ",
   "Recover password": "Recover password",
   "Register": "Register",
   "Save": "Save",
+  "See all articles": "See all articles",
   "Set new password": "Set new password",
   "Update": "Update",
   "Upload new picture": "Upload new picture",
@@ -49,6 +51,10 @@
     "Logout": "Logout",
     "Register": "Register"
   },
+  "kb": {
+    "Articles": "Articles",
+    "Knowledge Base": "Knowledge Base"
+  },
   "modules": {
     "Analytics": "Analytics",
     "Auth": "Auth",
@@ -74,10 +80,11 @@
     "Previous": "Previous"
   },
   "password": "Password",
+  "read more": "read more",
   "user": {
     "Account": "Account",
-    "Account activation link expired.": "Enllaç d'activació expirat.",
-    "Account has been activated successfully": "El compte s'ha activat correctament",
+    "Account activation link expired.": "Account activation link expired.",
+    "Account has been activated successfully": "Account has been activated successfully",
     "Account successfully updated": "Account successfully updated",
     "Activating account": "Activar compteg",
     "Change password": "Change password",

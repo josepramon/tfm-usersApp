@@ -4,13 +4,15 @@
   "Cancel": "Cancelar",
   "Create": "Crear",
   "Error communicating with the server": "Error en la comunicación con el servidor",
-  "Expand/collapse menu": "Expandir/colapsar menú",
   "List": "Listar",
+  "Loading": "Loading",
   "Login": "Iniciar sesión",
   "Password reset request expired.": "Link de recuperación de contraseña expirado",
+  "Published at ": "Published at ",
   "Recover password": "Recuperar contraseña",
   "Register": "Registro",
   "Save": "Guardar",
+  "See all articles": "Ver todos los artículos",
   "Set new password": "Establecer nueva contraseña",
   "Update": "Actualizar",
   "Upload new picture": "Subir una nueva imagen",
@@ -49,6 +51,10 @@
     "Logout": "Cerrar sessión",
     "Register": "Registro"
   },
+  "kb": {
+    "Articles": "Artículos",
+    "Knowledge Base": "Knowledge Base"
+  },
   "modules": {
     "Analytics": "Analítica",
     "Auth": "Autenticación",
@@ -74,6 +80,7 @@
     "Previous": "Anterior"
   },
   "password": "Contraseña",
+  "read more": "leer mas",
   "user": {
     "Account": "Cuenta",
     "Account activation link expired.": "Enlace de activación expirado.",

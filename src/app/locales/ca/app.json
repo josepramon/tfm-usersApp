@@ -4,13 +4,15 @@
   "Cancel": "Cancelar",
   "Create": "Crear",
   "Error communicating with the server": "Error en la comunicació amb el servidor",
-  "Expand/collapse menu": "Expandir/colapsar menú",
   "List": "Llistar",
+  "Loading": "Loading",
   "Login": "Iniciar sessió",
   "Password reset request expired.": "Enllaç de recuperació de contrassenya expirat",
+  "Published at ": "Published at ",
   "Recover password": "Recuperació de contrassenya",
   "Register": "Registre",
   "Save": "Desar",
+  "See all articles": "Veure tots els articles",
   "Set new password": "Establir nova contrassenya",
   "Update": "Actualitzar",
   "Upload new picture": "Pujar una nova imatge",
@@ -49,6 +51,10 @@
     "Logout": "Tancar sessió",
     "Register": "Registre"
   },
+  "kb": {
+    "Articles": "Articles",
+    "Knowledge Base": "Knowledge Base"
+  },
   "modules": {
     "Analytics": "Analítica",
     "Auth": "Autenticació",
@@ -74,12 +80,13 @@
     "Previous": "Anterior"
   },
   "password": "Contrassenya",
+  "read more": "llegir més",
   "user": {
     "Account": "Compte",
-    "Account activation link expired.": "",
-    "Account has been activated successfully": "",
+    "Account activation link expired.": "Enllaç d'activació expirat.",
+    "Account has been activated successfully": "El compte s'ha activat correctament",
     "Account successfully updated": "El compte s'ha actualitzat correctament",
-    "Activating account": "",
+    "Activating account": "Activant compte",
     "Change password": "Canvi de contrassenya",
     "Password has been unpdated successfully": "La contrassenya s'ha actualitzat correctament",
     "Password reset request successfully created": "Sol·licitud de restauració de contrassenya",
