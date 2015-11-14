@@ -108,7 +108,7 @@ module.exports = class Article extends Model
                                                 attribute: 'foo',
                                                 page: 4,
                                                 limit: 200,
-                                                order: {id: 1, name: -1}
+                                                sort: {id: 1, name: -1}
                                               }
   @static
   ###

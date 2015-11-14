@@ -74,11 +74,11 @@ module.exports = class Category extends Model
                                                 attribute: 'foo',
                                                 page: 4,
                                                 limit: 200,
-                                                order: {id: 1, name: -1}
+                                                sort: {id: 1, name: -1}
                                               }
   @static
   ###
-  @expandedRelations: ['articles', 'articles.tags', 'articles.category']
+  @expandedRelations: [{ attribute: 'articles', sort: {'publish_date':-1} }, 'articles.tags', 'articles.category']
 
 
   ###

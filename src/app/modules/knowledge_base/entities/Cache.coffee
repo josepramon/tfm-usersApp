@@ -27,6 +27,8 @@ module.exports = class EntitiesCache extends Object
     unless @articlesCollection
       @articlesCollection = @appChannel.request 'kb:articles:entities',
         filters: ['isPublished']
+        sort: {'publish_date': -1}
+
     @articlesCollection
 
 
@@ -36,7 +38,7 @@ module.exports = class EntitiesCache extends Object
   getCategoriesCollection: ->
     unless @categoriesCollection
       @categoriesCollection = @appChannel.request 'kb:categories:entities',
-        filters: ['hasArticles']
+        filters: ['hasArticles', 'articles.isPublished']
     @categoriesCollection
 
 
@@ -46,7 +48,7 @@ module.exports = class EntitiesCache extends Object
   getTagsCollection: ->
     unless @tagsCollection
       @tagsCollection = @appChannel.request 'kb:tags:entities',
-        filters: ['hasArticles']
+        filters: ['hasArticles', 'articles.isPublished']
     @tagsCollection
 
 
@@ -57,6 +59,7 @@ module.exports = class EntitiesCache extends Object
     unless @uncategorizedArticlesCollection
       @uncategorizedArticlesCollection = @appChannel.request 'kb:articles:entities',
         filters: ['isPublished', { 'hasCategory' : false }]
+        sort: {'publish_date': -1}
 
     uncategorizedModel = @appChannel.request 'new:kb:categories:entity'
     uncategorizedModel.set
@@ -79,9 +82,17 @@ module.exports = class EntitiesCache extends Object
   @return {Article}
   ###
   getArticleModel: (articleId) ->
+    # first try to retrieve the article from any of the available collections
+    # (some of them may not be loaded, everything is lazy loaded)
+
     # try to retrieve from the articlesCollection
     if @articlesCollection and @articlesCollection.models.length
       model = @articlesCollection.get articleId
+      if model then return model
+
+    # try to retrieve from the uncatecorized articlesCollection
+    if @uncategorizedArticlesCollection and @uncategorizedArticlesCollection.models.length
+      model = @uncategorizedArticlesCollection.get articleId
       if model then return model
 
     # try to retrieve from the categoriesCollection nested collections
@@ -92,7 +103,8 @@ module.exports = class EntitiesCache extends Object
         if model then return model
 
     # if not found, load it from the server
-    @appChannel.request 'kb:articles:entity', articleId
+    @appChannel.request 'kb:articles:entity', articleId,
+      filters: ['isPublished']
 
 
   ###
@@ -104,7 +116,9 @@ module.exports = class EntitiesCache extends Object
       model = @categoriesCollection.get categoryId
       if model then return model
 
-    @appChannel.request 'kb:categories:entity', categoryId
+    @appChannel.request 'kb:categories:entity', categoryId,
+      filters: ['hasArticles', 'articles.isPublished']
+
 
 
   ###
@@ -116,5 +130,6 @@ module.exports = class EntitiesCache extends Object
       model = @tagsCollection.get tagId
       if model then return model
 
-    @appChannel.request 'kb:tags:entity', tagId
+    @appChannel.request 'kb:tags:entity', tagId,
+      filters: ['hasArticles', 'articles.isPublished']
 
