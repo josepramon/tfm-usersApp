@@ -1,12 +1,15 @@
-<h3 class="panel-title">
-  <a href="#knowledge-base/categories/{{#if id}}{{id}}/{{/if}}{{slug}}">{{name}}</a>
-</h3>
+<div class="block-title">
+  <h3>
+    <i class="icon icon-folder-o"></i>
+    <a href="#knowledge-base/categories/{{#if id}}{{id}}/{{/if}}{{slug}}">{{name}}</a>
+  </h3>
+</div>
 
-<div class="category-articles">
+<div class="block-content category-articles">
   <ul></ul>
 
   <div class="actions">
-    <a href="#knowledge-base/categories/{{#if id}}{{id}}/{{/if}}{{slug}}" class="btn btn-primary btn-sm btn-link readMore">
+    <a href="#knowledge-base/categories/{{#if id}}{{id}}/{{/if}}{{slug}}" class="btn btn-info btn-xs readMore">
       {{t "See all articles"}} ({{articles_total}})
     </a>
   </div>

@@ -14,11 +14,11 @@
   {{#if excerpt}}
     {{{excerpt}}}
   {{else}}
-    {{truncate body 110 '...' }}
+    {{ chain 'stripHTML' 'truncate' body 110 '...' }}
   {{/if}}
 </div>
 
 <div class="actions">
-  <a href="#knowledge-base/articles/{{id}}/{{slug}}" class="btn btn-primary btn-sm inverted readMore">{{t "read more"}}</a>
+  <a href="#knowledge-base/articles/{{id}}/{{slug}}" class="btn btn-info btn-xs readMore">{{t "read more"}}</a>
 </div>
 

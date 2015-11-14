@@ -10,10 +10,17 @@
     {{#if category}}
       {{#with category}}
         <li>
-          <a href="#knowledge-base/categories/{{id}}/{{slug}}">
-            <i class="icon icon-folder-open"></i>
-            {{name}}
-          </a>
+          {{#if id}}
+            <a href="#knowledge-base/categories/{{id}}/{{slug}}">
+              <i class="icon icon-folder-open"></i>
+              {{name}}
+            </a>
+          {{else}}
+            <a href="#knowledge-base/categories/uncategorized">
+              <i class="icon icon-folder-open"></i>
+              {{t "Uncategorized"}}
+            </a>
+          {{/if}}
         </li>
       {{/with}}
     {{else}}
@@ -60,15 +67,16 @@
 
     {{#if tags}}
       <div class="block">
-        <h4>Etiquetes</h4>
+        <h4>{{t "modules::Tags"}}</h4>
         {{#each tags}}
           <a href="#knowledge-base/tags/{{id}}/{{slug}}" class="label label-info">{{name}}</a>
         {{/each}}
       </div>
     {{/if}}
 
-    <div class="block related-articles">
-      <h4>Articles relacionats</h4>
+
+    {{!-- <div class="block related-articles">
+      <h4>{{t "kb::Related articles"}}</h4>
       <ul>
         <li><a href="#">Sit animi libero ducimus totam tenetur.</a></li>
         <li><a href="#">Sit animi libero ducimus totam tenetur.</a></li>
@@ -76,7 +84,8 @@
         <li><a href="#">Sit animi libero ducimus totam tenetur.</a></li>
         <li><a href="#">Sit animi libero ducimus totam tenetur.</a></li>
       </ul>
-    </div>
+    </div> --}}
+
 
   </aside>
 
