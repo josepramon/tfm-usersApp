@@ -3,7 +3,13 @@ Backbone = require 'backbone'
 
 CompositeView = require 'msq-appbase/lib/appBaseComponents/views/CompositeView'
 
-GridRow = require './GridRow'
+CategoryView = require './CategoryView'
+TagsView     = require './TagsView'
+
+# Just to check the model type (the constructor.name is useless
+# because the name is mangled by the minifier)
+CategoryModel = require '../../../entities/categories/Category'
+
 
 
 ###
@@ -18,8 +24,10 @@ module.exports = class DashboardView extends CompositeView
   template: require './templates/dashboard.hbs'
   className: 'kbDashboard'
 
-  childView: GridRow
   childViewContainer: '.blocks'
+
+  getChildView: (child) ->
+    if child instanceof CategoryModel then CategoryView else TagsView
 
   initialize: (options) ->
     { @categoriesCollection, @tagsCollection, @uncategorizedModel } = options
@@ -38,7 +46,4 @@ module.exports = class DashboardView extends CompositeView
 
     data.add tagsCollectionWrapper
 
-    grid = data.groupBy (list, iterator) ->
-      Math.floor iterator / 2
-
-    @collection = new Backbone.Collection _.toArray(grid)
+    @collection = data

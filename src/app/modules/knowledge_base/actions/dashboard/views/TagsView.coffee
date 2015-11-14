@@ -11,7 +11,7 @@ Knowledge Base dashboard tag cloud block view
 ###
 module.exports = class TagsView extends ItemView
   template: require './templates/tags.hbs'
-  className: 'tagsBlock block col-md-6'
+  className: 'tagsBlock block col-sm-6 col-md-4'
 
   onRender: ->
     opts =
@@ -25,7 +25,7 @@ module.exports = class TagsView extends ItemView
       {
         text:   tag.get 'name'
         weight: tagWeight
-        link:   '#knowledge-base/tags/' + tag.get('id')
+        link:   '#knowledge-base/tags/' + tag.get('id') + '/' + tag.get('slug')
       }
 
 
@@ -33,5 +33,5 @@ module.exports = class TagsView extends ItemView
     # the DOM should be ready, this does not work if
     # executed immediatelly, so add a little delay
     setTimeout (=>
-      @$('.panel-body').jQCloud words, opts
+      @$('.tags-container').jQCloud words, opts
     ), 500
