@@ -1,0 +1,39 @@
+/**
+ * # Mosaiqo frontend - scrollable areas
+ *
+ * Module items menu, contains a list of editable items and a toolbar
+ * with a search widget and other tools
+ */
+
+// Layout:
+// ---------------------------
+.infiniteScroll
+  flex: 1 0 auto
+  flex-grow: initial
+
+  & > header
+    flex: 0 1 auto
+
+  // module items container
+  .itemsContainer
+    flex: 1 1 auto
+    overflow: scroll
+    -webkit-overflow-scrolling: touch
+    height: 1px // hack...
+
+
+// Loading animation
+// for lists with infinite scrolling
+// ---------------------------------------------
+.itemsContainer
+  .loadingAnimation
+    // widget style deffined on misc/loaders.styl
+    // just override some styles
+    padding: 10px
+    text-align: center
+    font-size: 12px
+    color: $appTheme['mutedDark']
+    opacity: 0
+
+  &.loading .loadingAnimation
+    opacity: 1

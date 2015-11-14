@@ -1,0 +1,79 @@
+/**
+ * # Mosaiqo frontend - header
+ */
+
+#globalHeader
+  position: relative
+  height: 160px
+  padding-left: 17px
+  background: #adadad url(../images/backgrounds/header/header.jpg) no-repeat
+  background-size: cover
+
+
+  &, a
+    color: $appTheme['textColorDark']
+
+
+  // logo
+  h1
+    margin: 5px 20px
+
+    a
+      accessibleHidden()
+      width: 133px
+      height: 40px
+      background: url(../images/logos/logo133x40.png) no-repeat
+
+
+  // widgets
+  .regions
+    float: right
+    margin: 12px 20px 0
+
+  .widgetContainer
+    display: inline-block
+
+
+
+  // links
+  .icon // icon
+    font-size: 22px
+    color: #777
+    transition: color 300ms
+
+    &:hover
+      color: $appTheme['textColorDark']
+
+  a
+    text-decoration: none
+
+    span // text
+      accessibleHiddenInline()
+
+
+// layout collapsing button
+#globalNavToggler
+  position: absolute
+  top: 15px
+  left: 8px
+
+
+// show/hide the logo and layout collapsing button on auth events
+#globalHeader h1, #globalNavToggler
+  display: inline-block
+
+
+
+@media screen and (max-width: 600px)
+  #globalHeader
+    z-index: 130
+    h1 a
+      collapsedLogo()
+
+@media screen and (max-width: 400px)
+  #globalHeader .regions
+    margin-left: 0
+    margin-right: 0
+
+  #globalNavToggler
+    left: 10px

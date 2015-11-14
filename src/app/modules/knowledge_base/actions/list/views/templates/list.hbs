@@ -1,0 +1,68 @@
+<header id="moduleHeader">
+  <h1>
+    {{#if name}}
+      {{name}}
+    {{else}}
+      {{t "kb::Articles"}}
+    {{/if}}
+  </h1>
+
+  <ol class="breadcrumb arrow">
+    <li>
+      <a href="#">
+        <i class="icon icon-home"></i>
+        {{t "kb::Knowledge Base"}}
+      </a>
+    </li>
+
+    <li>
+      {{#if isCategory}}
+          <span>
+            <i class="icon icon-folder-open"></i>
+            {{name}}
+          </span>
+      {{else}}
+        {{#if isTag}}
+          <span>
+            <i class="icon icon-tags"></i>
+            {{name}}
+          </span>
+        {{else}}
+          {{#if isSearch}}
+            <span>
+              <i class="icon icon-search"></i>
+              {{t "kb::Search results"}}
+              {{#if searchQuery}}
+                - <em>{{searchQuery}}</em>
+              {{/if}}
+            </span>
+          {{else}}
+            <span>
+              <i class="icon icon-files-o"></i>
+              {{t "kb::Articles"}}
+            </span>
+          {{/if}}
+        {{/if}}
+      {{/if}}
+    </li>
+  </ol>
+</header>
+
+
+{{#if description}}
+  <div class="articles-parent-description">
+    {{{description}}}
+  </div>
+{{/if}}
+
+<div class="itemsContainer">
+  <ul class="items articles"></ul>
+  <div class="loadingAnimation">
+    <p>
+      {{t "Loading"}}
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+    </p>
+  </div>
+</div>

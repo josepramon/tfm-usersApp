@@ -1,0 +1,24 @@
+<header>
+  <h3>
+    <a href="#knowledge-base/articles/{{id}}/{{slug}}">{{title}}</a>
+  </h3>
+  {{#if publish_date}}
+    <time class="date date-published" title="{{t "Published at "}} {{formatDate publish_date "%d/%m/%Y %I:%M%p"}}">
+      {{formatDate publish_date "%d/%m/%Y"}}
+    </time>
+  {{/if}}
+</header>
+
+
+<div class="excerpt">
+  {{#if excerpt}}
+    {{{excerpt}}}
+  {{else}}
+    {{ chain 'stripHTML' 'truncate' body 110 '...' }}
+  {{/if}}
+</div>
+
+<div class="actions">
+  <a href="#knowledge-base/articles/{{id}}/{{slug}}" class="btn btn-info btn-xs readMore">{{t "read more"}}</a>
+</div>
+
