@@ -24,7 +24,7 @@ $ ->
   app = new App opts
 
   # Wait for the locales to be loaded before starting it
-  app.channel.once 'locales:loaded', ->
+  app.channel.once 'locale:loaded', ->
     app.start()
 
   # the global Mosaiqo var is just for debugging purposes and will be removed

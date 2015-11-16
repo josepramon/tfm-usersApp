@@ -35,7 +35,7 @@
     <li class="active">
       <span>
         <i class="icon icon-file-o"></i>
-        {{title}}
+        {{ chain 'stripHTML' 'truncate' title 40 '...' }}
       </span>
     </li>
   </ol>
@@ -90,10 +90,3 @@
   </aside>
 
 </article>
-
-
-
-
-
-
-<!-- category -->

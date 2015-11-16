@@ -13,7 +13,6 @@ module.exports =
         'dist/**/*' # all the resources in 'dist/'
         '!dist/assets/vendor/**/*' # except the 'dist/vendor/' subtree
         '!dist/assets/js/**/*.map'
-        'dist/assets/vendor/requirejs/require.js'
         'dist/assets/vendor/pace/themes/blue/pace-theme-minimal.css'
         'dist/assets/vendor/pace/pace.min.js'
       ]
