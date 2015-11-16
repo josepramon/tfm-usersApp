@@ -14,7 +14,7 @@
   {{#if excerpt}}
     {{{excerpt}}}
   {{else}}
-    {{ chain 'stripHTML' 'truncate' body 110 '...' }}
+    {{ chain 'stripHTML' 'truncate' body 300 '...' }}
   {{/if}}
 </div>
 
