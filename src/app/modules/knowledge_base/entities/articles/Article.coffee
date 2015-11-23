@@ -92,6 +92,10 @@ module.exports = class Article extends Model
       key:                  'category'
       relatedModel:->       factory.invoke 'kb:entities|Category'
       saveFilterAttributes: ['id', 'name']
+    ,
+      type:                 Backbone.Many
+      key:                  'attachments'
+      collectionType:->     factory.invoke 'kb:entities|AttachmentsCollection'
   ]
 
 
@@ -112,7 +116,7 @@ module.exports = class Article extends Model
                                               }
   @static
   ###
-  @expandedRelations: ['tags', 'category']
+  @expandedRelations: ['tags', 'category', 'attachments', 'attachments.upload']
 
 
   ###

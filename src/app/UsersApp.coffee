@@ -297,7 +297,7 @@ module.exports = class UsersApp extends Application
     # ### Navigate to the initial route (if authorised)
     #
     # Navigate us to the root route unless we're already navigated somewhere else.
-    initialRoute = @getCurrentRoute()
+    initialRoute = @getCurrentRoute() or ''
     @navigate(initialRoute, trigger: true) unless (initialRoute and initialRoute is not @loginRoute)
 
 

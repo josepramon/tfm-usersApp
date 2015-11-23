@@ -113,8 +113,18 @@
       margin-bottom: 20px
       color: #aaa
 
-.related-articles,
-.category-articles
+    &.attachments
+      h5
+        font-size: 1em
+
+      .description
+        padding-left: 1.4em
+        margin: -.4em 0 1em
+        color: #888
+
+
+.category-articles,
+.article aside .block
   ul
     padding: 0
     list-style: none
@@ -123,16 +133,19 @@
   li
     position: relative
     margin-bottom: .5em
-    padding-left: 11px
 
-    &:before
-      position: absolute
-      left: -10px
-      top: 2px
-      content: "\f016"
-      font-family: FontAwesome
-      margin: 0 5px
-      color: #ccc
+.category-articles li
+.related-articles li,
+  padding-left: 11px
+
+  &:before
+    position: absolute
+    left: -10px
+    top: 2px
+    content: "\f016"
+    font-family: FontAwesome
+    margin: 0 5px
+    color: #ccc
 
 
 .kbDashboard
