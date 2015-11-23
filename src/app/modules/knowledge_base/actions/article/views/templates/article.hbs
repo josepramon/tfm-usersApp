@@ -75,6 +75,30 @@
     {{/if}}
 
 
+    {{#if attachments}}
+      <div class="block attachments">
+        <h4>{{t "Attachments"}}</h4>
+        <ul>
+          {{#each attachments}}
+            <li>
+              <h5>
+                <a href="{{upload.url}}" target="_blank">
+                  <i class="icon icon-cloud-download"></i>
+                  {{name}}
+                </a>
+              </h5>
+              {{#if description}}
+                <div class="description">
+                  {{description}}
+                </div>
+              {{/if}}
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/if}}
+
+
     {{!-- <div class="block related-articles">
       <h4>{{t "kb::Related articles"}}</h4>
       <ul>
