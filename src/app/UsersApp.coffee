@@ -66,6 +66,9 @@ utilities  = [
 
   # Flash messages
   require 'msq-appbase/lib/utilities/flash'
+
+  # Dialogs (custom alerts, confirms, prompts, etc)
+  require 'msq-appbase/lib/utilities/dialogs'
 ]
 components = [
   # Generic form component
@@ -73,6 +76,9 @@ components = [
 
   # Loading view, defers the rendering until entities are loaded
   require 'msq-appbase/lib/components/loading'
+
+  # Uploader component, provides a nice UI with drag & drop, progressbars, etc
+  require 'msq-appbase/lib/components/uploader'
 ]
 
 
@@ -196,12 +202,23 @@ module.exports = class UsersApp extends Application
       base = apiRootUrl or config.API.rootURL
       @httpRequestUrlTransform '/api', base
 
-      # the API may respond sometimes with new URLs that need
+      # The API may respond sometimes with new URLs that need
       # to be transformed to make them consistent with the ones
       # defined in the app  in order to automatically apply some
       # filters, like injecting authorization headers or whatever
-      @channel.reply 'cleanUrl', (url) ->
-        url.replace base, '/api'
+      @channel.reply 'api:url:clean', (url) -> url.replace base, '/api'
+
+      # The communication with the API is performed using jQuery
+      # (Backbone internally uses this), so all the API URLs are
+      # defined like `/api/whatever`, and with a prefilter, they're
+      # automatically rewritten to match the API base URL defined in
+      # the aplication preferences, so there's no need to update the
+      # url in multiple files.
+      #
+      # In some situations, a raw XMLHttpRequest object may be used instead
+      # of the jQuery provided one (for example some libraries don't use jQuery),
+      # so, provide a method to obtain the appropiate url.
+      @channel.reply 'api:url:setBase', (url) -> url.replace '/api', base
 
 
   ###
@@ -280,7 +297,7 @@ module.exports = class UsersApp extends Application
     # ### Navigate to the initial route (if authorised)
     #
     # Navigate us to the root route unless we're already navigated somewhere else.
-    initialRoute = @getCurrentRoute()
+    initialRoute = @getCurrentRoute() or ''
     @navigate(initialRoute, trigger: true) unless (initialRoute and initialRoute is not @loginRoute)
 
 
