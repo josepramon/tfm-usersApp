@@ -1,0 +1,81 @@
+<div class="form-group">
+  <label for="title" class="control-label">
+    {{t "tickets::TicketModel::Title"}}
+  </label>
+  <div>
+    <input type="text" class="form-control" id="title" name="title" placeholder="{{t "tickets::TicketModel::Title"}}" value="{{title}}">
+    <span class="help-block hidden"></span>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label for="body" class="control-label">
+    {{t "tickets::TicketModel::Body"}}
+  </label>
+  <div>
+    <textarea class="editor" id="body" name="body" data-editor-settings='{"styles":false, "lists": false, "table": false, "picture": true, "horizontalrule": false, "align": false, "source": false}'>{{body}}</textarea>
+    <span class="help-block hidden"></span>
+  </div>
+</div>
+
+
+
+{{#if categories}}
+  {{#lengthEqual categories 1}}
+
+    {{#each categories}}
+      <input type="hidden" id="category" name="category" value="{{id}}" checked />
+    {{/each}}
+
+  {{else}}
+
+    <div class="form-group">
+      <label for="category" class="control-label">
+        {{t "tickets::TicketModel::Category"}}
+      </label>
+      <div>
+        <select id="category" name="category" class="form-control">
+          <option>{{t "tickets::Select a category..."}}</option>
+          {{#each categories}}
+            <option value="{{id}}">{{name}}</option>
+          {{/each}}
+        </select>
+        <span class="help-block hidden"></span>
+      </div>
+    </div>
+
+  {{/lengthEqual}}
+{{/if}}
+
+
+
+<div class="panel-group" id="accordion">
+  <div class="panel-heading" role="tab" id="headingOne">
+    <h4 class="panel-title">
+      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+
+        <i class="icon icon-cloud-download"></i> {{t "tickets::File attachments"}}
+      </a>
+    </h4>
+  </div>
+
+  <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+    <div class="panel-body">
+
+      <div class="form-group">
+        <label for="attachments" class="control-label">
+          {{t "tickets::TicketModel::Attachments"}}
+        </label>
+        <div>
+
+          <input type="text" class="form-control" id="attachments" name="attachments" placeholder="{{t "tickets::TicketModel::Attachments"}}" data-max-files="10" data-accepted-files="" />
+
+          <span class="help-block hidden"></span>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

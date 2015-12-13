@@ -18,4 +18,8 @@ module.exports = class ModuleRouter extends Router
                      module rootUrl (supplied in the constructor)
   ###
   prefixedAppRoutes:
-    '' : 'show'
+    ''     : 'list'
+    '/:id' : 'edit'
+
+    # not needed, the form is embedded in the main tickets action
+    #'/new' : 'create'

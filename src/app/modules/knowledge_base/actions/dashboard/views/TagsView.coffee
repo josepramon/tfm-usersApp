@@ -11,7 +11,7 @@ Knowledge Base dashboard tag cloud block view
 ###
 module.exports = class TagsView extends ItemView
   template: require './templates/tags.hbs'
-  className: 'tagsBlock block col-sm-6 col-md-4'
+  className: 'tags-block block list-block col-sm-6 col-md-4'
 
   onRender: ->
     opts =

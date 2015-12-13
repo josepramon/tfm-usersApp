@@ -43,7 +43,7 @@
 
 
 
-<article class="article row">
+<article class="mainContent article row">
 
   <div class="main col-xs-12 col-md-9">
     <header>
@@ -66,7 +66,7 @@
   <aside class="col-xs-12 col-md-3">
 
     {{#if tags}}
-      <div class="block">
+      <div class="block list-block">
         <h4>{{t "modules::Tags"}}</h4>
         {{#each tags}}
           <a href="#knowledge-base/tags/{{id}}/{{slug}}" class="label label-info">{{name}}</a>
@@ -76,7 +76,7 @@
 
 
     {{#if attachments}}
-      <div class="block attachments">
+      <div class="block list-block attachments">
         <h4>{{t "Attachments"}}</h4>
         <ul>
           {{#each attachments}}
@@ -99,7 +99,7 @@
     {{/if}}
 
 
-    {{!-- <div class="block related-articles">
+    {{!-- <div class="block list-block related-articles">
       <h4>{{t "kb::Related articles"}}</h4>
       <ul>
         <li><a href="#">Sit animi libero ducimus totam tenetur.</a></li>

@@ -11,6 +11,10 @@ $bowerLibsPath = '../../dist/assets/vendor'
 // disable the prefixer (we're using autoprefixr)
 ks-vendors-prefixes = false
 
+// fix a bug in kouto-swiss that strips the 'align-items' rules
+// when the prefixer is disabled
+align-items( value, args... )
+  align-items: value args
 
 // animations
 //@require $bowerLibsPath+'/animate-stylus/static_effects/openUpRight'

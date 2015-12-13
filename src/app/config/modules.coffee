@@ -17,6 +17,9 @@ module.exports = [
       class: require 'modules/user/modules/register'
     ]
   ,
+    id:    'Uploads'
+    class: require 'modules/uploads'
+  ,
     id:    'KnowledgeBase'
     class: require 'modules/knowledge_base'
   ,

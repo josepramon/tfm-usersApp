@@ -77,3 +77,75 @@
 
   #globalNavToggler
     left: 10px
+
+
+
+
+// helpdesk header
+#helpDeskHead
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(0,0,0,.5)
+
+  .inner
+    max-width: 1200px
+    padding: 0 20px
+    margin: 0 auto
+    display: flex
+
+  h1
+    display: block
+    margin: 0 0 .2em
+    font-size: 1.5em
+
+#searchContainer
+  padding-top:    20px
+  padding-bottom: 20px
+
+#sectionsNav
+  display: flex
+  align-items: center
+  border-left: solid 1px rgba(255,255,255,.5)
+
+  .icon
+    margin-right: 0.2em
+    font-size: 1.3em
+    color: #fff !important
+
+  ul
+    list-style: none
+    padding-left: 0
+    margin: 0
+
+@media screen and (max-width: 600px)
+  #helpDeskHead .inner
+    display: block
+
+  #searchContainer
+    padding-top:    10px
+    padding-bottom: 10px
+
+    h1
+      font-size: 1.3em
+
+  #sectionsNav
+    display: block
+    border-left: none
+
+    ul
+      text-align: center
+
+    li
+      display: inline-block
+      margin: 0 5px
+
+
+@media screen and (max-width: 480px)
+  #globalHeader
+    height: 170px
+
+    h1, .regions
+      margin-left:  5px
+      margin-right: 5px

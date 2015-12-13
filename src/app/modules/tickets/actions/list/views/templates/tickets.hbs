@@ -1,0 +1,44 @@
+<header id="moduleHeader">
+  <ol class="breadcrumb arrow">
+    <li>
+      <a href="#">
+        <i class="icon icon-home"></i>
+      </a>
+    </li>
+    <li>
+      <span>
+        <i class="icon icon-ticket"></i>
+        {{t "tickets::Tickets"}}
+      </span>
+    </li>
+  </ol>
+</header>
+
+
+
+<div class="row" id="ticketsContainer">
+
+  <div class="col-md-8" id="ticketsBlock">
+    <header>
+      <h3>
+        <i class="icon icon-ticket"></i>
+        {{t "tickets::My tickets"}}
+      </h3>
+    </header>
+    <div id="ticketsList"></div>
+  </div>
+
+
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <header class="panel-heading">
+        <h3 class="panel-title">
+          <i class="icon icon-plus-square"></i>
+          {{t "tickets::New ticket"}}
+        </h3>
+      </header>
+      <div id="ticketsCreate" class="panel-body"></div>
+    </div>
+  </div>
+
+</div>
