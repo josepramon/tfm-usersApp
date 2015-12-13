@@ -22,4 +22,4 @@ module.exports = class ListItemView extends ItemView
 
   template: require './templates/item.hbs'
   tagName : 'li'
-  className: 'articleListItem'
+  className: 'articleListItem contentListItem'

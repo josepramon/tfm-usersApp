@@ -1,0 +1,24 @@
+<div class="search">
+  <div class="input-group input-group-sm">
+    <input type="search" class="form-control" name="{{name}}" placeholder="{{placeholder}}" value="{{value}}">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="submit" title="{{t "Search"}}">
+        <i class="icon icon-search"></i>
+      </button>
+    </span>
+    <a class="clear" data-backgrid-action="clear" href="#">&times;</a>
+  </div>
+</div>
+
+<ul id="ticketsNav">
+  <li>
+    <button type="button" data-filter="open" class="btn btn-link btn-xs active">
+      {{t "tickets::Open tickets"}}
+    </button>
+  </li>
+  <li>
+    <button type="button" data-filter="close" class="btn btn-link btn-xs">
+      {{t "tickets::Closed tickets"}}
+    </button>
+  </li>
+</ul>

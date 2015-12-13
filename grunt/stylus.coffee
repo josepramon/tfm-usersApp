@@ -21,7 +21,7 @@ module.exports =
       use: [
         require('kouto-swiss')
         () -> require('autoprefixer-stylus') browsers: ['last 2 versions', 'ie 9']
-        () -> require('csso-stylus') restructure: false
+        # () -> require('csso-stylus') restructure: false
       ]
     files: [
       # main css

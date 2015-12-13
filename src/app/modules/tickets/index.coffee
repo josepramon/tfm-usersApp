@@ -10,6 +10,7 @@ Module = require 'msq-appbase/lib/appBaseComponents/modules/Module'
 # Module components:
 Router          = require './ModuleRouter'
 RouteController = require './ModuleController'
+Entities        = require './entities'
 
 # Radio channels:
 # All the modules have inherited an @appChannel propperty,
@@ -51,9 +52,21 @@ module.exports = class TicketsApp extends Module
 
 
   ###
+  Controller used by the module router
+
+  @type {ModuleController}
+  @private
+  ###
+  moduleController = null
+
+
+  ###
   Module initialization
   ###
   initialize: ->
+
+    # register the module entities
+    @app.module 'Entities.tickets', Entities
 
     # setup the module components
     @initModuleRouter()
@@ -61,22 +74,10 @@ module.exports = class TicketsApp extends Module
     # module metadata getter
     moduleChannel.reply 'meta', => @meta
 
-
-
-  # Module events
-  # ------------------------
-
-  ###
-  Event handler executed after the module has been started
-  ###
-  onStart: ->
-
-
-  ###
-  Event handler executed after the module has been stopped
-  ###
-  onStop: ->
-
+    # expose the controller create method so the form can
+    # be embedded inside other actions
+    moduleChannel.reply 'newTicketForm', (args) ->
+      moduleController.create args
 
 
   # Aux methods
@@ -86,6 +87,8 @@ module.exports = class TicketsApp extends Module
   Setup the module router
   ###
   initModuleRouter: ->
+    moduleController = new RouteController()
+
     moduleRouter = new Router
-      controller: new RouteController()
+      controller: moduleController
       rootUrl:    @meta.rootUrl

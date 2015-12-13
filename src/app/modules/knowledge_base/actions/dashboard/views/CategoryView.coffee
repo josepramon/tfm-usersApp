@@ -16,7 +16,7 @@ Knowledge Base dashboard category block view
 ###
 module.exports = class CategoryView extends CompositeView
   template:  require './templates/category.hbs'
-  className: 'categoryBlock block col-sm-6 col-md-4'
+  className: 'category-block block list-block col-sm-6 col-md-4'
 
   childView:          ArticleItemView
   childViewContainer: '.category-articles ul'

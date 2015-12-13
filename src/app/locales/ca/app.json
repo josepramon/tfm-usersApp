@@ -43,6 +43,10 @@
   },
   "Validation error": "Error de validació",
   "You are not allowed to access to this section.": "No tens permisos per accedir a aquesta secció.",
+  "attachments": {
+    "Description": "Descripció",
+    "Title": "Títol"
+  },
   "footer": {
     "About": "Sobre nosaltres",
     "Contact Us": "Contacte",
@@ -94,6 +98,69 @@
     "Click on the image or drag over a new image to upload a new profile picture": "Fes click en la imatge o arrossega-hi a sobre una nova imatge per al perfil"
   },
   "read more": "llegir més",
+  "tickets": {
+    "Add comment": "Afegir comentari",
+    "Agent": "Agent",
+    "CategoryModel": {
+      "Description": "Descripció",
+      "Name": "Nom"
+    },
+    "Close ticket": "Tancar tíquet",
+    "Closed tickets": "Tíquets tancats",
+    "CommentModel": {
+      "Attachments": "Arxius adjunts",
+      "Comment": "Comentari",
+      "Created_at": "Data creació",
+      "Updated_at": "Última actualització",
+      "User": "Usuari"
+    },
+    "Comments": "Comentaris",
+    "File attachments": "Arxius adjunts",
+    "My tickets": "Els meus tíquets",
+    "New comment": "Nou comentari",
+    "New ticket": "Nou tíquet",
+    "Open tickets": "Tíquets oberts",
+    "Reopen ticket": "Reobrir tíquet",
+    "Search tickets": "Cercar tíquets",
+    "Select a category...": "Selecciona una categoria...",
+    "Select new ticket status...": "Selecciona un nou estat...",
+    "StatusModel": {
+      "Description": "Descripció",
+      "Name": "Nom",
+      "Order": "Ordre"
+    },
+    "TagModel": {
+      "Description": "Descripció",
+      "Name": "Nom",
+      "Tickets": "Tíquets",
+      "Tickets_total": "Tíquets"
+    },
+    "There are no available tickets": "No hi ha tíquets disponibles",
+    "Ticket details": "Detalls",
+    "Ticket evolution": "Evolució del tíquet",
+    "Ticket successfully created": "El tíquet s'ha creat correctament",
+    "Ticket successfully saved": "El tíquet s'ha desat correctament",
+    "Ticket successfully updated": "El tíquet s'ha actualitzat correctament",
+    "TicketModel": {
+      "Attachments": "Arxius adjunts",
+      "Body": "Descripció",
+      "Category": "Categoria",
+      "Comments": "Comentaris",
+      "Created_at": "Creat",
+      "ID": "ID",
+      "Manager": "Agent",
+      "Status": "Estat",
+      "Statuses": "Estats",
+      "Title": "Títol",
+      "Updated_at": "Actualitzat",
+      "User": "Usuari"
+    },
+    "TicketStatusModel": {
+      "Comments": "Comentaris",
+      "Status": "Estat"
+    },
+    "Tickets": "Tíquets"
+  },
   "uploader": {
     "Are you sure you want to cancel this upload?": "Estàs segur què vols cancel·lar la pujada d'arxius?",
     "Are you sure you want to delete this?": "Estàs segur què vols eliminar això?",

@@ -43,6 +43,10 @@
   },
   "Validation error": "Validation error",
   "You are not allowed to access to this section.": "You are not allowed to access to this section.",
+  "attachments": {
+    "Description": "Description",
+    "Title": "Title"
+  },
   "footer": {
     "About": "About",
     "Contact Us": "Contact Us",
@@ -94,6 +98,69 @@
     "Click on the image or drag over a new image to upload a new profile picture": "Click on the image or drag over a new image to upload a new profile picture"
   },
   "read more": "read more",
+  "tickets": {
+    "Add comment": "Add comment",
+    "Agent": "Agent",
+    "CategoryModel": {
+      "Description": "Description",
+      "Name": "Name"
+    },
+    "Close ticket": "Close ticket",
+    "Closed tickets": "Closed tickets",
+    "CommentModel": {
+      "Attachments": "Attachments",
+      "Comment": "Comment",
+      "Created_at": "Created",
+      "Updated_at": "Updated",
+      "User": "User"
+    },
+    "Comments": "Comments",
+    "File attachments": "Attachments",
+    "My tickets": "My tickets",
+    "New comment": "New ticket",
+    "New ticket": "New ticket",
+    "Open tickets": "Open tickets",
+    "Reopen ticket": "Reopen ticket",
+    "Search tickets": "Search tickets",
+    "Select a category...": "Select a category...",
+    "Select new ticket status...": "Select new ticket status...",
+    "StatusModel": {
+      "Description": "Description",
+      "Name": "Name",
+      "Order": "Order"
+    },
+    "TagModel": {
+      "Description": "Description",
+      "Name": "Name",
+      "Tickets": "Tickets",
+      "Tickets_total": "Tickets"
+    },
+    "There are no available tickets": "There are no available tickets",
+    "Ticket details": "Ticket details",
+    "Ticket evolution": "Timeline",
+    "Ticket successfully created": "Ticket successfully created",
+    "Ticket successfully saved": "Ticket successfully saved",
+    "Ticket successfully updated": "Ticket successfully updated",
+    "TicketModel": {
+      "Attachments": "Attachments",
+      "Body": "Body",
+      "Category": "Category",
+      "Comments": "Comments",
+      "Created_at": "Created",
+      "ID": "ID",
+      "Manager": "Agent",
+      "Status": "Status",
+      "Statuses": "Statuses",
+      "Title": "Title",
+      "Updated_at": "Updated",
+      "User": "User"
+    },
+    "TicketStatusModel": {
+      "Comments": "Comments",
+      "Status": "Status"
+    },
+    "Tickets": "Tickets"
+  },
   "uploader": {
     "Are you sure you want to cancel this upload?": "Are you sure you want to cancel this upload?",
     "Are you sure you want to delete this?": "Are you sure you want to delete this?",

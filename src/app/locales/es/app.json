@@ -43,6 +43,10 @@
   },
   "Validation error": "Error de validación",
   "You are not allowed to access to this section.": "No tienes privilegios para acceder a esta sección.",
+  "attachments": {
+    "Description": "Descripción",
+    "Title": "Título"
+  },
   "footer": {
     "About": "Sobre nosotros",
     "Contact Us": "Contacto",
@@ -94,6 +98,69 @@
     "Click on the image or drag over a new image to upload a new profile picture": "Pincha en la imagen o arrastra encima una nueva imagen para el perfil"
   },
   "read more": "leer mas",
+  "tickets": {
+    "Add comment": "Nuevo comentario",
+    "Agent": "Agente",
+    "CategoryModel": {
+      "Description": "Descripción",
+      "Name": "Nombre"
+    },
+    "Close ticket": "Cerrar tíquet",
+    "Closed tickets": "Tíquets cerrados",
+    "CommentModel": {
+      "Attachments": "Archivos adjuntos",
+      "Comment": "Comentario",
+      "Created_at": "Fecha creación",
+      "Updated_at": "Última actualización",
+      "User": "User"
+    },
+    "Comments": "Comentarios",
+    "File attachments": "Archivos adjuntos",
+    "My tickets": "Mis tíquets",
+    "New comment": "Nuevo comentario",
+    "New ticket": "Nuevo tíquet",
+    "Open tickets": "Tíquets abiertos",
+    "Reopen ticket": "Reabrir tíquet",
+    "Search tickets": "Buscar tíquets",
+    "Select a category...": "Selecciona una categoría...",
+    "Select new ticket status...": "Selecciona un nuevo estado...",
+    "StatusModel": {
+      "Description": "Descripción",
+      "Name": "Nombre",
+      "Order": "Orden"
+    },
+    "TagModel": {
+      "Description": "Descripción",
+      "Name": "Nombre",
+      "Tickets": "Tíquets",
+      "Tickets_total": "Tíquets"
+    },
+    "There are no available tickets": "No hay tíquets disponibles",
+    "Ticket details": "Detalles",
+    "Ticket evolution": "Evolución",
+    "Ticket successfully created": "El tíquet se ha creado correctamente",
+    "Ticket successfully saved": "El tíquet se ha guardado correctamente",
+    "Ticket successfully updated": "El tíquet se ha actualizado correctamente",
+    "TicketModel": {
+      "Attachments": "Archivos adjuntos",
+      "Body": "Descripción",
+      "Category": "Categoría",
+      "Comments": "Comentarios",
+      "Created_at": "Creado",
+      "ID": "ID",
+      "Manager": "Agente",
+      "Status": "Estado",
+      "Statuses": "Estados",
+      "Title": "Título",
+      "Updated_at": "Actualizado",
+      "User": "Usuario"
+    },
+    "TicketStatusModel": {
+      "Comments": "Comentarios",
+      "Status": "Estado"
+    },
+    "Tickets": "Tíquets"
+  },
   "uploader": {
     "Are you sure you want to cancel this upload?": "¿Estás seguro que quieres cancelar la subida de archivos?",
     "Are you sure you want to delete this?": "¿Estás seguro que quieres eliminar esto?",
