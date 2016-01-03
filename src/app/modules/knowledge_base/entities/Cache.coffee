@@ -27,7 +27,7 @@ module.exports = class EntitiesCache extends Object
     unless @articlesCollection
       @articlesCollection = @appChannel.request 'kb:articles:entities',
         filters: ['isPublished']
-        sort: {'publish_date': -1}
+        sort: {'weight': -1, 'publish_date': -1}
 
     @articlesCollection
 
@@ -39,6 +39,7 @@ module.exports = class EntitiesCache extends Object
     unless @categoriesCollection
       @categoriesCollection = @appChannel.request 'kb:categories:entities',
         filters: ['hasArticles', 'articles.isPublished']
+        sort: {'weight': -1}
     @categoriesCollection
 
 
@@ -59,7 +60,7 @@ module.exports = class EntitiesCache extends Object
     unless @uncategorizedArticlesCollection
       @uncategorizedArticlesCollection = @appChannel.request 'kb:articles:entities',
         filters: ['isPublished', { 'hasCategory' : false }]
-        sort: {'publish_date': -1}
+        sort: {'weight': -1, 'publish_date': -1}
 
     uncategorizedModel = @appChannel.request 'new:kb:categories:entity'
     uncategorizedModel.set
@@ -67,12 +68,13 @@ module.exports = class EntitiesCache extends Object
       slug:     'uncategorized'
 
     @appChannel.request 'when:fetched', @uncategorizedArticlesCollection, =>
-      uncategorizedModel.set
-        articles: @uncategorizedArticlesCollection
-        articles_total: @uncategorizedArticlesCollection.state.totalRecords
+      if @uncategorizedArticlesCollection
+        uncategorizedModel.set
+          articles: @uncategorizedArticlesCollection
+          articles_total: @uncategorizedArticlesCollection.state.totalRecords
 
-      # the state is lost on the setter
-      uncategorizedModel.get('articles').state = @uncategorizedArticlesCollection.state
+        # the state is lost on the setter
+        uncategorizedModel.get('articles').state = @uncategorizedArticlesCollection.state
 
     uncategorizedModel
 

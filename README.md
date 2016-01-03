@@ -33,7 +33,7 @@ The URL can be changed later without recompiling, editing the variable `MOSAIQO_
 
 There are two grunt tasks available to build the project:
 
-- The default one, `grunt`, builds the application for production, with the assets minified and some other optimisations (*warning:* this task also enables *appcache*, which is not ready at this point of the development process)
+- The default one, `grunt`, builds the application for production, with the assets minified and some other optimisations
 - The task `grunt dev`, bulds the application in development mode, without minification, with source maps, and also starts a simple HTTP server to test the application. While the task is active (it can be terminated with `CTR+C`), the task _watches_ the source directory and automatically executes the tsts and rebuilds the application if any file is changed.
 
 There're some other tasks, documented in `grunt/aliases.yml`.
@@ -56,3 +56,22 @@ For example:
 ```
 
 It's possible to change the language without rebuilding the project changing the `lang` attribute of the `html` tag on `dist/index.html`
+
+
+## Other customisations
+
+The links on the footer can be customised adding to the `env.json` file a node called "footer" with something like:
+
+```
+{
+  "footer": [
+    { "text": "About us", "url": "http://whatever.com/about" },
+    { "text": "Legal", "url": "http://whatever.com/legal" },
+    { "text": "contact", "url": "contact.html" }
+  ]
+}
+```
+
+and rebuild the project.
+
+Any other customisation requires editing the code.

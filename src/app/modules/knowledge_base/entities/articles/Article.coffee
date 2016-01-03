@@ -78,6 +78,11 @@ module.exports = class Article extends Model
     ###
     body: ''
 
+    ###
+    @property {Number} Determines the ordering
+    ###
+    weight: 0
+
 
   ###
   @property {Array} Nested entities

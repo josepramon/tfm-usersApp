@@ -47,17 +47,6 @@ module.exports = class Status extends Model
 
 
   ###
-  @property {Object} Model validation rules
-  ###
-  validation:
-    name:
-      required: true
-    order:
-      required: true
-      pattern: 'number'
-
-
-  ###
   @property {Object} Custom attribute labels
                      Used by the validator when building the error messages
   @static

@@ -23,3 +23,11 @@ module.exports = class CommentView extends ItemView
   template: require './templates/comment.hbs'
   tagName : 'li'
   className: 'comment'
+
+
+  onRender: ->
+    u = @model.get 'user'
+
+    if u
+      userType = u.get '__t'
+      if userType is 'Manager' then @$el.addClass 'comment-agentComment'
