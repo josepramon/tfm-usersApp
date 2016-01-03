@@ -9,7 +9,6 @@
   background: #adadad url(../images/backgrounds/header/header.jpg) no-repeat
   background-size: cover
 
-
   &, a
     color: $appTheme['textColorDark']
 
@@ -101,6 +100,7 @@
     font-size: 1.5em
 
 #searchContainer
+  flex: 1
   padding-top:    20px
   padding-bottom: 20px
 
@@ -145,7 +145,19 @@
 @media screen and (max-width: 480px)
   #globalHeader
     height: 170px
+    padding-left: 4px
 
     h1, .regions
-      margin-left:  5px
-      margin-right: 5px
+      margin-left:  0
+      margin-right: 0
+
+    .regions
+      position: absolute
+      top: 0;
+      right: 0;
+
+    .icon
+      color: #fff
+
+  #helpDeskHead
+    background-color: rgba(0,0,0,.6)
