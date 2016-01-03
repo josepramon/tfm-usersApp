@@ -16,6 +16,11 @@
     border-bottom: solid 1px #ddd
     color: #aaa
 
+@media screen and (max-width: 991px)
+  #ticketsBlock
+    margin-bottom: 60px
+
+
 
 // tickets list
 #ticketsList
@@ -73,7 +78,6 @@
     white-space: normal
 
 
-
 #ticketsNodataContainer
   display: none
 
@@ -107,6 +111,25 @@
 
     &[disabled]
       color: #ccc !important
+
+
+
+@media screen and (max-width: 480px)
+  #ticketsList .gridFilter
+    text-align: center
+
+    .search, #ticketsNav
+      float: none
+
+    .search
+      width: 90%
+      margin: auto
+
+    #ticketsNav
+      margin: 10px
+      .btn
+        font-size: 1.1em
+
 
 
 // new ticket form
@@ -193,6 +216,9 @@
       max-height: 300px
       width:  auto !important
       height: auto !important
+
+  .comment-agentComment
+    border-left-color: $appTheme['logoPink']
 
 
 .ticketActions

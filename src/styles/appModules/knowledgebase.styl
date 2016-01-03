@@ -11,11 +11,16 @@
 .article .main
   header
     h1, h3
+      position: relative
+      padding-left: 1.6em
       &:before
         content: "\f016"
         font-family: FontAwesome
         margin: 0 8px 0 5px
         color: #aaa
+        position: absolute
+        top:  0
+        left: 0
 
 
 .articles-parent-description
@@ -61,7 +66,7 @@
 
   .block-content
     position: relative
-    min-height: 200px
+    min-height: 225px
     padding: 10px 10px 0
 
   .actions
